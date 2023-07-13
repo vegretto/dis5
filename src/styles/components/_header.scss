@@ -1,0 +1,229 @@
+.header {
+  background-color: $template-light-gray;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    padding: 40px 0 20px;
+    border-bottom: 1px solid #cacdce;
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__top-item {
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .icon {
+      margin-right: 10px;
+
+      &-phone {
+        width: 20px;
+        height: 20px;
+      }
+
+      &-envelope {
+        width: 25px;
+        height: 19px;
+      }
+
+      &-point {
+        width: 17px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__top-item-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: $template-black;
+  }
+
+  a.header__top-item-text {
+    &:hover {
+      color: $template-purple;
+    }
+  }
+
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    @media (max-width: 991px) {
+      justify-content: space-between;
+      padding: 55px 0 49px;
+    }
+  }
+
+  &__logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-shrink: 0;
+    margin-right: 20px;
+  }
+
+  &__logo {
+    color: $template-black;
+    font-size: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+
+  &__logo-descriptor {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: $template-black;
+      font-size: 12px;
+      line-height: 15px;
+    }
+
+    img {
+      margin: 0 5px 0 2px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    align-items: baseline;
+    margin: 0 50px 0 auto;
+    @media (max-width: 1299px) {
+      margin: 0 25px 0 auto;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__nav-item {
+    margin-right: 35px;
+    @media (max-width: 1399px) {
+      margin-right: 15px;
+    }
+    @media (max-width: 1199px) {
+      margin-right: 9px;
+    }
+
+    &:hover {
+      .header__nav-link {
+        color: $template-purple;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--dropdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &:hover {
+        .icon-arrow-down {
+          stroke: $template-purple;
+          transform: rotate(180deg);
+          transition: .3s ease-in-out;
+        }
+
+        .header__nav-dropdown-box {
+          display: block;
+        }
+      }
+
+      .icon-arrow-down {
+        width: 12px;
+        height: 6px;
+        margin-top: 7px;
+        fill: $transparent;
+        stroke: $template-black;
+        stroke-width: 2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        transition: .3s ease-in-out;
+      }
+    }
+  }
+
+  &__nav-link {
+    color: $template-black;
+    flex-shrink: 0;
+    @media (max-width: 1299px) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+    @media (max-width: 1199px) {
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+
+  &__nav-dropdown-box {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    background-color: $white;
+    padding: 25px 20px;
+    top: calc(100% + 15px);
+    left: 50%;
+    min-width: 100%;
+    border-radius: 15px;
+    transform: translateX(-50%);
+  }
+
+  &__dropdown-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__dropdown-nav-item {
+    font-size: 16px;
+    line-height: 20px;
+    color: $template-black;
+    padding: 5px 10px;
+    margin-bottom: 5px;
+    white-space: nowrap;
+
+    &:hover {
+      color: $template-purple;
+    }
+  }
+
+  &__order-btn {
+    padding: 16px 40px;
+    max-width: 270px;
+    width: 100%;
+    @media (max-width: 1299px) {
+      max-width: 180px;
+      padding: 16px 10px;
+    }
+    @media (max-width: 991px) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu-toggle {
+    display: none;
+    @media (max-width: 991px) {
+      display: block;
+    }
+
+    .icon {
+      width: 30px;
+      height: 20px;
+    }
+  }
+}

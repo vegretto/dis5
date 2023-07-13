@@ -1,0 +1,8 @@
+.row {
+  display: flex;
+}
+
+.col-3 {
+  flex-basis: calc(25%);
+  max-width: calc(25%);
+}

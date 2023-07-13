@@ -1,0 +1,167 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    section.main-banner
+        ._container.container
+            ._inner
+                h1._title.h1 Наша специализация - #[span.txt-purple уникальные] диссертации и&nbsp;дипломы на&nbsp;заказ
+                ._cols
+                    ._col
+                        ._heading Диплом на заказ
+                        ._line Цена: #[span.txt-semi-bold от 11 900 р]
+                        ._line Срок: #[span.txt-semi-bold от 2 дней]
+                        ._line Доработки #[span.txt-semi-bold бесплатно]
+                    ._col
+                        ._heading Диссертация на заказ
+                        ._line Цена: #[span.txt-semi-bold от 13 900 р]
+                        ._line Срок: #[span.txt-semi-bold от 7 дней]
+                        ._line Доработки #[span.txt-semi-bold бесплатно]
+
+        ._bg
+            +pictureAdaptive('main-banner-bg', 'png', 1920, 756, 600)
+    section.order-form
+        ._container.container
+            form(action="https://www.work5.ru/orders")._form
+                ._form-item
+                    .select-wrapper
+                        select(name="type_work").js-search-select.hidden
+                            option(value="") Тип работы
+                            option(value="diplom") Диссертация
+                            option(value="diplom") Диплом
+                            option(value="diplom") Реферат
+                ._form-item
+                    input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                ._form-item
+                    button(type="submit")._order-btn.common-btn.common-btn--purple Узнать стоимость
+                ._form-item.-license-info
+                    .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+                ._form-item
+                    ._promocode-wrapper
+                        ._promocode-toggle.js-show-promocode У меня есть промокод
+                        input(type="text" name="promocode" placeholder="Промокод")._input.common-input.hidden.js-promocode-input
+                input(type="hidden" name="act" value="services").hidden
+    section.features
+        ._container.container
+            ._items
+                ._item
+                    ._item-img-wrapper
+                        +picture('features1', 'png', 42, 42)
+                    ._item-text Подберем лучшего исполнителя по&nbsp;вашему предмету. Вам не&nbsp;придется заниматься поиском автора и&nbsp;обсуждением деталей заказа.
+                ._item
+                    ._item-img-wrapper
+                        +picture('features2', 'png', 42, 42)
+                    ._item-text Проконтролируем автора по&nbsp;срокам и&nbsp;качеству. Наш отдел качества проверит заказ на&nbsp;соответствие требованиям и&nbsp;МУ.
+                ._item
+                    ._item-img-wrapper
+                        +picture('features3', 'png', 42, 42)
+                    ._item-text Хотите проконтролировать ход написания работы? Выдадим работу по&nbsp;главам, после согласования приступим к&nbsp;следующей.
+                ._item
+                    ._item-img-wrapper
+                        +picture('features4', 'png', 42, 42)
+                    ._item-text Не&nbsp;знаете с&nbsp;чего начать? Выполним план к&nbsp;вашей работе бесплатно, после согласования приступим к&nbsp;выполнению работы.
+    section.advantages
+        ._container.container
+            h2.h2 Почему выбирают Studsovet
+            ._items
+                ._item
+                    ._item-heading №1
+                    ._item-text По&nbsp;количеству оффлайн-офисов в&nbsp;20&nbsp;городах России
+                ._item
+                    ._item-heading 4 000+
+                    ._item-text Специализируемся на&nbsp;выполнении сложных и&nbsp;нестандартных работ
+                ._item
+                    ._item-heading 100 000+
+                    ._item-text выполненных дипломов и&nbsp;диссертаций
+                ._item
+                    ._item-heading 4,9 оценка
+                    ._item-text средние оценки по&nbsp;результатам опросов&nbsp;клиентов
+                ._item
+                    ._item-heading 16
+                    ._item-text лет помогаем вам достигать целей в&nbsp;учёбе
+                ._item
+                    ._item-heading 24 / 7
+                    ._item-text ваш персональный менеджер всегда на&nbsp;связи
+    section.lead-magnet
+        ._inner
+            h2._title.h2 Узнайте стоимость консультации!
+            form(action="https://www.work5.ru/orders")._form
+                ._form-item
+                    .select-wrapper
+                        select(name="type_work").js-search-select.hidden
+                            option(value="") Тип работы
+                            option(value="diplom") Диссертация
+                            option(value="diplom") Диплом
+                            option(value="diplom") Реферат
+                ._form-item
+                    input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                ._form-item.-double
+                    button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                    .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                input(type="hidden" name="act" value="services").hidden
+                ._form-item
+                    .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+    section.diplom-details
+        ._container.container
+            h2._title.h2 Мы лидеры рынка, поэтому можем предложить выгодные цены и&nbsp;короткие сроки
+            .service-details
+                ._item
+                    ._item-type Консультация
+                    ._item-heading Дипломная работа для&nbsp;вуза&nbsp;(ВКР)
+                    ._devider
+                    ._item-details
+                        ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                        ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                        ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                    ._item-price от 2 000 р.
+                    ._item-bottom
+                        a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                        a(href="#")._item-testimonials-box
+                            ._item-testimonials-img-wrapper
+                                +picture('comments', 'png', 20, 20)
+                            span._item-testimonials-text 2074&nbsp;отзыва
+                ._item
+                    ._item-type Консультация
+                    ._item-heading Дипломная работа для&nbsp;колледжа
+                    ._devider
+                    ._item-details
+                        ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                        ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                        ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                    ._item-price от 2 000 р.
+                    ._item-bottom
+                        a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                        a(href="#")._item-testimonials-box
+                            ._item-testimonials-img-wrapper
+                                +picture('comments', 'png', 20, 20)
+                            span._item-testimonials-text 2074&nbsp;отзыва
+                ._item
+                    ._item-type Консультация
+                    ._item-heading Глава дипломной работы
+                    ._devider
+                    ._item-details
+                        ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                        ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                        ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                    ._item-price от 2 000 р.
+                    ._item-bottom
+                        a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                        a(href="#")._item-testimonials-box
+                            ._item-testimonials-img-wrapper
+                                +picture('comments', 'png', 20, 20)
+                            span._item-testimonials-text 2074&nbsp;отзыва
+                ._item
+                    ._item-type Консультация
+                    ._item-heading Диплом MBA
+                    ._devider
+                    ._item-details
+                        ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                        ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                        ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                    ._item-price от 2 000 р.
+                    ._item-bottom
+                        a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                        a(href="#")._item-testimonials-box
+                            ._item-testimonials-img-wrapper
+                                +picture('comments', 'png', 20, 20)
+                            span._item-testimonials-text 2074&nbsp;отзыва
