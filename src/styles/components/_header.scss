@@ -203,12 +203,12 @@
   }
 
   &__order-btn {
-    padding: 16px 40px;
+    padding: 14px 40px;
     max-width: 270px;
     width: 100%;
     @media (max-width: 1299px) {
       max-width: 180px;
-      padding: 16px 10px;
+      padding: 14px 10px;
     }
     @media (max-width: 991px) {
       display: none;

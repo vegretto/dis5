@@ -65,6 +65,32 @@ $(document).ready(function () {
         $(this).hide()
         $(this).siblings('.js-promocode-input').show()
     })
+
+    const hideExcesses = (element, resolution) => {
+        if (screen.width > resolution) return
+        const maxItems = element.attr('data-max-items')
+        const itemsToShow = element.attr('data-items-to-show')
+        const items = element.children()
+        const itemsQty = items.length
+        if (itemsQty <= maxItems) return
+        items.each(function (index) {
+            if (index >= maxItems) $(this).hide().addClass('hidden')
+        })
+        const moreBtnMarkup = '<button class="more-button js-more-btn common-btn common-btn--purple">Ещё...</button>'
+        element.append(moreBtnMarkup)
+        const moreBtnDom = element.find('.js-more-btn')
+        moreBtnDom.on('click', function () {
+            const hiddenItems = element.children('.hidden')
+            if (hiddenItems.length <= itemsToShow) moreBtnDom.remove()
+            hiddenItems.each(function (index) {
+                if (index < itemsToShow) $(this).show().removeClass('hidden')
+            })
+        })
+    }
+
+    $('.js-hide-some').each(function () {
+        hideExcesses($(this), 991)
+    })
 });
 
 
