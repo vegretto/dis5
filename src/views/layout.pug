@@ -6,7 +6,14 @@ html(lang="ru")
         title Dis5.ru
         meta(name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0")
         link(rel="shortcut icon" href="img/favicon.ico" type="image/x-icon")
-        link(rel="stylesheet" href="styles/style.min.css")
+        link(rel="preload" href="/styles/style.min.css" as="style" onload="this.rel='stylesheet'")
+        link(rel="preload" href="/fonts/Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="/fonts/Inter/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="/fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin)
+        link(rel="preload" href="/scripts/vendor.min.js" as="script")
+        link(rel="preload" href="/scripts/main.min.js" as="script")
+        <script src="https://api-maps.yandex.ru/v3/?apikey=b94d7ec3-5178-446e-81c0-18bb45ea93c8&lang=ru_RU"></script>
+
     body
         block header
             include /views/components/header
@@ -16,6 +23,6 @@ html(lang="ru")
         block modals
             include /views/components/modal-mobile-menu
         block scripts
-            script(src="scripts/vendor.min.js")
-            script(src="scripts/main.min.js")
+            script(src="/scripts/vendor.min.js")
+            script(src="/scripts/main.min.js")
 

@@ -22,6 +22,7 @@
 
     .icon {
       margin-right: 10px;
+      fill: $template-black;
 
       &-phone {
         width: 20px;
@@ -51,7 +52,6 @@
       color: $template-purple;
     }
   }
-
 
   &__bottom {
     display: flex;

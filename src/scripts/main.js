@@ -66,7 +66,7 @@ $(document).ready(function () {
         $(this).siblings('.js-promocode-input').show()
     })
 
-    const hideExcesses = (element, resolution) => {
+    const hideSome = (element, resolution) => {
         if (screen.width > resolution) return
         const maxItems = element.attr('data-max-items')
         const itemsToShow = element.attr('data-items-to-show')
@@ -89,8 +89,70 @@ $(document).ready(function () {
     }
 
     $('.js-hide-some').each(function () {
-        hideExcesses($(this), 991)
+        hideSome($(this), 991)
     })
+
+    const testimonialsSlider = new Swiper('.js-testimonials-slider', {
+        slidesPerView: 1,
+        loop: true,
+        navigation: {
+            prevEl: '.swiper-button--prev',
+            nextEl: '.swiper-button--next',
+        },
+        breakpoints: {
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1365: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+
+    $('.js-accordion-toggle').on('click', function () {
+        if (!$(this).hasClass('opened')) {
+            $(this).next('.js-accordion-head').slideDown(300).addClass('opened')
+            $(this).addClass('opened')
+        } else {
+            $(this).next('.js-accordion-head').slideUp(300).removeClass('opened')
+            $(this).removeClass('opened')
+        }
+    })
+
+    // AMlfL08BAAAAigfqIgIAUJy9y-oUrRnCsYIRos-VfSKR64wAAAAAAAAAAABKOgHlk0CHGmtthDrzVUuqMNTaIg==
+
+    main();
+    async function main() {
+        await ymaps3.ready;
+        const {
+            YMap,
+            YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer,
+            YMapFeatureDataSource, YMapLayer,
+            YMapControls,
+            YMapMarker
+        } = ymaps3;
+
+        const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
+        const {YMapDefaultMarker} = await ymaps3.import('@yandex/ymaps3-markers@0.0.1');
+
+        const map = new YMap(document.getElementById('mainMap'), {
+            location: {
+                center: [37.591701, 55.749385],
+                zoom: 16
+            },
+            behaviors: ['pinchZoom', 'drag']
+        });
+
+        map.addChild(new  YMapDefaultSchemeLayer());
+        map.addChild(new YMapDefaultFeaturesLayer());
+        map.addChild(new YMapControls({position: 'left'}).addChild(new YMapZoomControl({})));
+        map.addChild(new YMapDefaultMarker({
+            coordinates: [37.591701, 55.749385]
+        }));
+
+    }
 });
 
 

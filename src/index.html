@@ -6,7 +6,12 @@
 		<title>Dis5.ru</title>
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
 		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-		<link rel="stylesheet" href="styles/style.min.css">
+		<link rel="preload" href="/styles/style.min.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="/fonts/Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/Inter/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/scripts/vendor.min.js" as="script">
+		<link rel="preload" href="/scripts/main.min.js" as="script"><script src="https://api-maps.yandex.ru/v3/?apikey=b94d7ec3-5178-446e-81c0-18bb45ea93c8&lang=ru_RU"></script>
 	</head>
 	<body>
 		<header class="header">
@@ -618,6 +623,422 @@
 				</div>
 			</div>
 		</section>
+		<section class="warranties">
+			<div class="warranties__container container">
+				<h2 class="h2">Гарантии</h2>
+				<div class="warranties__items">
+					<div class="warranties__item">
+						<div class="warranties__item-heading">Оригинальность</div>
+						<div class="warranties__item-text">Все дипломные работы и&nbsp;диссертации проходят проверку на&nbsp;антиплагиат. Мы&nbsp;гарантируем, что&nbsp;ваша&nbsp;работа будет уникальной и&nbsp;%&nbsp;оригинальности не&nbsp;ниже выбранного при оформлении заказа.</div>
+					</div>
+					<div class="warranties__item">
+						<div class="warranties__item-heading">Бесплатная доработка</div>
+						<div class="warranties__item-text">Преподаватель просит внести правки? Если потребуется, выполним бесплатно в&nbsp;рамках ваших&nbsp;первоначальных требований к&nbsp;заказу.</div>
+					</div>
+					<div class="warranties__item">
+						<div class="warranties__item-heading">Соблюдение сроков</div>
+						<div class="warranties__item-text">Мы&nbsp;понимаем, как важно получить работу точно&nbsp;в&nbsp;срок. Поэтому мы&nbsp;никогда не&nbsp;задерживаем&nbsp;сроки написаний дипломных&nbsp;и&nbsp;диссертаций.</div>
+					</div>
+					<div class="warranties__item">
+						<div class="warranties__item-heading">Конфиденциальность</div>
+						<div class="warranties__item-text">Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.</div>
+					</div>
+					<div class="warranties__item">
+						<div class="warranties__item-heading">Договор/оферта</div>
+						<div class="warranties__item-text">Мы&nbsp;оказываем услуги официально.<br>Заключаем договор в&nbsp;оффлайн-офисе или оферту&nbsp;на&nbsp;сайте.</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="testimonials">
+			<div class="testimonials__container container">
+				<h2 class="testimonials__title h2">Отзывы</h2>
+				<div class="testimonials__top">
+					<div class="testimonials__top-item">
+						<div class="testimonials__top-heading">
+							<svg class="icon icon-star">
+								<use xlink:href="/img/svg/sprite.svg#star"></use>
+							</svg>
+							<div class="testimonials__top-heading-text">4.9</div>
+						</div>
+						<div class="testimonials__top-text">Средняя оценка:</div>
+					</div>
+					<div class="testimonials__top-item">
+						<div class="testimonials__top-heading">
+							<div class="testimonials__top-heading-text">10 000+</div>
+						</div>
+						<div class="testimonials__top-text">Общее кол-во отзывов:</div>
+					</div>
+				</div>
+				<div class="testimonials__slider swiper-slider js-testimonials-slider">
+					<div class="testimonials__swiper-wrapper swiper-wrapper">
+						<div class="testimonials__swiper-slide swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-rating">
+									<svg class="icon icon-star">
+										<use xlink:href="/img/svg/sprite.svg#star"></use>
+									</svg>
+									<div class="testimonials__item-rating-num">4.9</div>
+								</div>
+								<div class="testimonials__item-text">“Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”</div>
+								<div class="testimonials__item-person">
+									<div class="testimonials__item-avatar">
+										<picture>
+											<source data-srcset="/img/testimonials-avatar1.webp, /img/testimonials-avatar1@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/testimonials-avatar1.png" data-srcset="/img/testimonials-avatar1@2x.png 2x" alt="" width="70" height="70"/>
+										</picture>
+									</div>
+									<div class="testimonials__item-person-name">Имя Фамилия</div>
+								</div>
+							</div>
+						</div>
+						<div class="testimonials__swiper-slide swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-rating">
+									<svg class="icon icon-star">
+										<use xlink:href="/img/svg/sprite.svg#star"></use>
+									</svg>
+									<div class="testimonials__item-rating-num">4.9</div>
+								</div>
+								<div class="testimonials__item-text">“Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”</div>
+								<div class="testimonials__item-person">
+									<div class="testimonials__item-avatar">
+										<picture>
+											<source data-srcset="/img/testimonials-avatar2.webp, /img/testimonials-avatar2@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/testimonials-avatar2.png" data-srcset="/img/testimonials-avatar2@2x.png 2x" alt="" width="70" height="70"/>
+										</picture>
+									</div>
+									<div class="testimonials__item-person-name">Имя Фамилия</div>
+								</div>
+							</div>
+						</div>
+						<div class="testimonials__swiper-slide swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-rating">
+									<svg class="icon icon-star">
+										<use xlink:href="/img/svg/sprite.svg#star"></use>
+									</svg>
+									<div class="testimonials__item-rating-num">4.9</div>
+								</div>
+								<div class="testimonials__item-text">“Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”</div>
+								<div class="testimonials__item-person">
+									<div class="testimonials__item-avatar testimonials__item-avatar--placeholder">
+										<div class="testimonials__item-avatar-letter">И</div>
+									</div>
+									<div class="testimonials__item-person-name">Имя Фамилия</div>
+								</div>
+							</div>
+						</div>
+						<div class="testimonials__swiper-slide swiper-slide">
+							<div class="testimonials__item">
+								<div class="testimonials__item-rating">
+									<svg class="icon icon-star">
+										<use xlink:href="/img/svg/sprite.svg#star"></use>
+									</svg>
+									<div class="testimonials__item-rating-num">4.9</div>
+								</div>
+								<div class="testimonials__item-text">“Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”</div>
+								<div class="testimonials__item-person">
+									<div class="testimonials__item-avatar">
+										<picture>
+											<source data-srcset="/img/testimonials-avatar1.webp, /img/testimonials-avatar1@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/testimonials-avatar1.png" data-srcset="/img/testimonials-avatar1@2x.png 2x" alt="" width="70" height="70"/>
+										</picture>
+									</div>
+									<div class="testimonials__item-person-name">Имя Фамилия</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-buttons-wrapper">
+						<div class="swiper-button swiper-button--prev">
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="/img/svg/sprite.svg#arrow-right"></use>
+							</svg>
+						</div>
+						<div class="swiper-button swiper-button--next">
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="/img/svg/sprite.svg#arrow-right"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="ratings">
+			<div class="ratings__container container">
+				<h2 class="ratings__title h2">Оценки на&nbsp;сайтах-&#8288;отзовиках</h2>
+				<div class="ratings__items">
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo1.webp, /img/rating-logo1@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo1.png" data-srcset="/img/rating-logo1@2x.png 2x" alt="" width="131" height="52"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo1.webp, /img/rating-logo1@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo1.png" data-srcset="/img/rating-logo1@2x.png 2x" alt="" width="131" height="52"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo2.webp, /img/rating-logo2@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo2.png" data-srcset="/img/rating-logo2@2x.png 2x" alt="" width="133" height="44"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo3.webp, /img/rating-logo3@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo3.png" data-srcset="/img/rating-logo3@2x.png 2x" alt="" width="124" height="48"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo4.webp, /img/rating-logo4@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo4.png" data-srcset="/img/rating-logo4@2x.png 2x" alt="" width="158" height="38"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+					<div class="ratings__item">
+						<div class="ratings__item-inner">
+							<div class="ratings__item-head">
+								<picture>
+									<source data-srcset="/img/rating-logo5.webp, /img/rating-logo5@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/rating-logo5.png" data-srcset="/img/rating-logo5@2x.png 2x" alt="" width="187" height="44"/>
+								</picture>
+							</div>
+							<div class="ratings__item-tail">
+								<svg class="icon icon-star">
+									<use xlink:href="/img/svg/sprite.svg#star"></use>
+								</svg>
+								<div class="ratings__item-rating-num">4.9</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="authors-features">
+			<div class="authors-features__container container">
+				<div class="authors-features__inner">
+					<h2 class="authors-features__title h2">Вам не&nbsp;надо тратить время на&nbsp;поиск<br> подходящего автора, мы отобрали сильнейших!</h2>
+					<div class="authors-features__items">
+						<div class="authors-features__item authors-features__item--first">Диссертациями и&nbsp;дипломами занимаются только лучшие специалисты</div>
+						<div class="authors-features__item authors-features__item--second">При подборе автора учитываем опыт работы по&nbsp;вашему предмету, оценку его работы другими клиентами, сдачу в&nbsp;срок, отсутствие доработок</div>
+						<div class="authors-features__item authors-features__item--third">Диссертации выполняют кандидаты и&nbsp;доктора наук. С&nbsp;автором можно пообщаться по&nbsp;конференц-связи</div>
+					</div>
+					<div class="authors-features__img-wrapper">
+						<picture>
+							<source data-srcset="/img/authors-features-sm.webp, /img/authors-features-sm@2x.webp 2x" type="image/webp" media="(max-width: 399px)"/>
+							<source data-srcset="/img/authors-features-sm.png, /img/authors-features-sm@2x.png 2x" media="(max-width: 399px)"/>
+							<source data-srcset="/img/authors-features.webp, /img/authors-features@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/authors-features.png" data-srcset="/img/authors-features@2x.png 2x" alt="" width="550" height="523"/>
+						</picture>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="faq">
+			<div class="faq__container container">
+				<h2 class="faq__title h2">Вопросы и ответы</h2>
+				<div class="faq__items">
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">Вы заключаете договор?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">Какие даете гарантии на работу?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">В каком виде я получаю работу?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">При выполнении предоплаты, могу ли я доверять<br> вам мою личную информацию?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">Если работа меня не устроит смогу ли я вернуть деньги?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+					<div class="faq__item">
+						<div class="faq__head js-accordion-toggle">
+							<div class="faq__head-text">Можно ли пообщаться с автором напрямую?</div>
+							<div class="faq__head-btn">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div>
+						</div>
+						<div class="faq__body js-accordion-head">
+							<div class="faq__body-text">Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contacts">
+			<div class="contacts__container container">
+				<h2 class="contacts__title h2">Наши оффлайн-офисы во всех крупнейших городах России</h2>
+				<div class="contacts__subtext">У нас есть офисы в 20 городах России.</div>
+				<div class="contacts__contacts-items">
+					<div class="contacts__contacts-item contacts__contacts-item--phone">
+						<svg class="icon icon-phone">
+							<use xlink:href="/img/svg/sprite.svg#phone"></use>
+						</svg><a class="contacts__contacts-item-text" href="tel:+70000000000">+7 (---) ---_--_--</a>
+					</div>
+					<div class="contacts__contacts-item contacts__contacts-item--mail">
+						<svg class="icon icon-envelope">
+							<use xlink:href="/img/svg/sprite.svg#envelope"></use>
+						</svg><a class="contacts__contacts-item-text" href="mailto:name@gmail.com">name@gmail.com</a>
+					</div>
+					<div class="contacts__contacts-item contacts__contacts-item--link">
+						<div class="contacts__contacts-item-text">Наша страница контактов: <a href="mailto:client@work5.ru">client@work5.ru</a></div>
+					</div>
+				</div>
+				<div class="contacts__map" id="mainMap"></div>
+				<div class="contacts__bottom">
+					<div class="contacts__bottom-col">
+						<div class="contacts__advantages">
+							<div class="contacts__advantages-item">
+								<div class="contacts__advantages-heading">Профессионально</div>
+								<div class="contacts__advantages-text">Мы гарантируем высокое качество консультаций, так как наши специалисты обладают высокой квалификацией и проходят тщательный тестовый отбор. Только 2 из 10 репетиторов приступают к консультациям.</div>
+							</div>
+							<div class="contacts__advantages-item">
+								<div class="contacts__advantages-heading">Надежно</div>
+								<div class="contacts__advantages-text">Каждый заказ, оформленный на нашей платформе, контролируется персональным менеджером. Благодаря тщательному контролю, вы гарантированно получаете качественную консультацию. Наш отдел технического контроля проверит работу на соответствие МУ, ГОСТ, антиплагиат.</div>
+							</div>
+							<div class="contacts__advantages-item">
+								<div class="contacts__advantages-heading">Удобно</div>
+								<div class="contacts__advantages-text">Вы всегда можете узнать о процессе выполнения консультации и задать вопрос в режиме "онлайн" в личном кабинете.</div>
+							</div>
+						</div>
+					</div>
+					<div class="contacts__bottom-col">
+						<div class="contacts__info-items">
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Консультант:</div>
+								<div class="contacts__info-item-text">Специалист с опытом</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Гарантия на консультацию:</div>
+								<div class="contacts__info-item-text">До 6 месяцев</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Срок консультации:</div>
+								<div class="contacts__info-item-text">от 2-х часов</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Оригинальность:</div>
+								<div class="contacts__info-item-text">Высокая</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Цена:</div>
+								<div class="contacts__info-item-text">от 2 500 руб.</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Доработки:</div>
+								<div class="contacts__info-item-text">Бесплатно</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Анонимность:</div>
+								<div class="contacts__info-item-text">&#9989;</div>
+							</div>
+							<div class="contacts__info-item">
+								<div class="contacts__info-item-heading">Кэшбек за консультацию:</div>
+								<div class="contacts__info-item-text">10%</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<div class="modal modal--mobile-menu" id="modalMobileMenu">
 			<div class="modal__close js-close-modal">
 				<svg class="icon icon-close">
@@ -701,7 +1122,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="scripts/vendor.min.js"></script>
-		<script src="scripts/main.min.js"></script>
+		<script src="/scripts/vendor.min.js"></script>
+		<script src="/scripts/main.min.js"></script>
 	</body>
 </html>

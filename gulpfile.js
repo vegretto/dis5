@@ -52,7 +52,7 @@ function scriptsVendor() {
         'node_modules/jquery/dist/jquery.js',
         'node_modules/lazysizes/lazysizes.js',
         'src/scripts/vendor/select2.full.min.js',
-        //'node_modules/swiper/swiper-bundle.min.js',
+        'node_modules/swiper/swiper-bundle.min.js',
         //'node_modules/imask/dist/imask.js',
         //'src/scripts/vendor/jquery.fancybox.js',
         //'src/scripts/vendor/datepicker.min.js',
