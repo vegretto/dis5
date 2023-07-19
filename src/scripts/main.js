@@ -1,5 +1,25 @@
 $(document).ready(function () {
 
+    function loadScript(url, callback) {
+
+        const script = document.createElement("script");
+        script.onload = function () {
+            callback();
+        };
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+    //Задержка действия на событие
+    const debounce = function (func, time) {
+        let timer
+        return function (event) {
+            if (timer) clearTimeout(timer)
+            timer = setTimeout(func, time, event)
+        }
+    }
+
     const getScrollBarWidth = () => {
         let el = document.createElement("div");
         el.style.cssText = "overflow:scroll; position:absolute;";
@@ -121,17 +141,15 @@ $(document).ready(function () {
         }
     })
 
-    // AMlfL08BAAAAigfqIgIAUJy9y-oUrRnCsYIRos-VfSKR64wAAAAAAAAAAABKOgHlk0CHGmtthDrzVUuqMNTaIg==
+    const mainMap = document.getElementById('mainMap')
 
-    main();
-    async function main() {
+    async function initYMap() {
         await ymaps3.ready;
         const {
             YMap,
-            YMapDefaultSchemeLayer, YMapDefaultFeaturesLayer,
-            YMapFeatureDataSource, YMapLayer,
+            YMapDefaultSchemeLayer,
+            YMapDefaultFeaturesLayer,
             YMapControls,
-            YMapMarker
         } = ymaps3;
 
         const {YMapZoomControl} = await ymaps3.import('@yandex/ymaps3-controls@0.0.1');
@@ -147,11 +165,36 @@ $(document).ready(function () {
 
         map.addChild(new  YMapDefaultSchemeLayer());
         map.addChild(new YMapDefaultFeaturesLayer());
-        map.addChild(new YMapControls({position: 'left'}).addChild(new YMapZoomControl({})));
-        map.addChild(new YMapDefaultMarker({
-            coordinates: [37.591701, 55.749385]
-        }));
+        map.addChild(new YMapControls({position: 'left'}).addChild(new YMapZoomControl()));
 
+        const markerContent = `<div><strong>Офис Work5</strong><div>
+                               <div>офис 468, этаж 4</div>`
+
+        map.addChild(new YMapDefaultMarker({
+            coordinates: [37.591701, 55.749385],
+            popup: {
+                content: markerContent,
+                position: 'right'
+            }
+        }));
+    }
+
+    let mapIsVisible = $(mainMap).visible(true)
+
+    const checkMapVisibility = () => {
+        mapIsVisible = $(mainMap).visible(true)
+        if (mapIsVisible) {
+            loadScript('https://api-maps.yandex.ru/v3/?apikey=b94d7ec3-5178-446e-81c0-18bb45ea93c8&lang=ru_RU',
+                initYMap)
+            window.removeEventListener('scroll', checkMapVisibility)
+        }
+    }
+
+    if (mapIsVisible) {
+        loadScript('https://api-maps.yandex.ru/v3/?apikey=b94d7ec3-5178-446e-81c0-18bb45ea93c8&lang=ru_RU',
+            initYMap)
+    } else {
+        window.addEventListener('scroll', checkMapVisibility, {passive: true});
     }
 });
 

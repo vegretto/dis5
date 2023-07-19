@@ -14,6 +14,13 @@ mixin pictureAdaptive(src, ext, width, height, resolution)
         source(data-srcset=`/img/${src}.webp, /img/${src}@2x.webp 2x` type="image/webp")
         img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' data-src=`/img/${src}.${ext}` data-srcset=`/img/${src}@2x.${ext} 2x` alt='' width=width height=height)
 
+mixin pictureAdaptive1x(src, ext, width, height, resolution)
+    picture
+        source(data-srcset=`/img/${src}-sm.webp`  type="image/webp" media=`(max-width: ${resolution}px)`)
+        source(data-srcset=`/img/${src}-sm.${ext}` media=`(max-width: ${resolution}px)`)
+        source(data-srcset=`/img/${src}.webp` type="image/webp")
+        img.lazyload(src='data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=' alt='' width=width height=height)
+
 mixin pictureFancybox(src, ext, width, height, dataFancyBox)
     a(href='img/' + src + '.' + ext data-fancybox=dataFancyBox)
         picture

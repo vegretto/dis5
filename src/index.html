@@ -11,7 +11,7 @@
 		<link rel="preload" href="/fonts/Inter/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/scripts/vendor.min.js" as="script">
-		<link rel="preload" href="/scripts/main.min.js" as="script"><script src="https://api-maps.yandex.ru/v3/?apikey=b94d7ec3-5178-446e-81c0-18bb45ea93c8&lang=ru_RU"></script>
+		<link rel="preload" href="/scripts/main.min.js" as="script">
 	</head>
 	<body>
 		<header class="header">
@@ -982,7 +982,15 @@
 						<div class="contacts__contacts-item-text">Наша страница контактов: <a href="mailto:client@work5.ru">client@work5.ru</a></div>
 					</div>
 				</div>
-				<div class="contacts__map" id="mainMap"></div>
+				<div class="contacts__map" id="mainMap">
+					<div class="contacts__map-ph">
+						<picture>
+							<source data-srcset="/img/main-map-ph-sm.webp" type="image/webp" media="(max-width: 767px)"/>
+							<source data-srcset="/img/main-map-ph-sm.png" media="(max-width: 767px)"/>
+							<source data-srcset="/img/main-map-ph.webp" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" alt="" width="1660" height="600"/>
+						</picture>
+					</div>
+				</div>
 				<div class="contacts__bottom">
 					<div class="contacts__bottom-col">
 						<div class="contacts__advantages">

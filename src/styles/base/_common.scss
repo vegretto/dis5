@@ -586,6 +586,28 @@ section {
   &__map {
     margin-bottom: 70px;
     height: 600px;
+    position: relative;
+    @media (max-width: 767px) {
+      height: 180px;
+    }
+
+    .ymaps3x0--default-marker__popup_right {
+      transform: translate(35px, calc(-50% - 40px));
+    }
+  }
+
+  &__map-ph {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__bottom {
