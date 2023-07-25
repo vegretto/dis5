@@ -131,6 +131,8 @@
       flex-direction: column;
       align-items: center;
       position: relative;
+      padding-bottom: 30px;
+      margin-bottom: -30px;
 
       &:hover {
         .icon-arrow-down {
@@ -140,7 +142,9 @@
         }
 
         .header__nav-dropdown-box {
-          display: block;
+          opacity: 1;
+          pointer-events: initial;
+          transition: .3s ease-in-out;
         }
       }
 
@@ -172,16 +176,18 @@
   }
 
   &__nav-dropdown-box {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
     position: absolute;
     z-index: 2;
     background-color: $white;
     padding: 25px 20px;
-    top: calc(100% + 15px);
+    top: calc(100% - 15px);
     left: 50%;
     min-width: 100%;
     border-radius: 15px;
     transform: translateX(-50%);
+    transition: .3s ease-in-out;
   }
 
   &__dropdown-nav {

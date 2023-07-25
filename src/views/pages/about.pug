@@ -1,0 +1,172 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .about-pg.pg-wrapper
+        section.about-main
+            ._container.container
+                h1._title.h1 #[span.txt-purple Наша специализация] - выполнение дипломных работ, ВКР, диссертаций, написание научных статьей на заказ.
+                ._img-wrapper
+                    +pictureAdaptive('about-main', 'png', 1660, 404, 600)
+                ._bottom
+                    ._bottom-item
+                        ._bottom-heading 17&nbsp;лет
+                        ._bottom-text За&nbsp;17&nbsp;лет работы мы&nbsp;накопили бесценный опыт по&nbsp;написанию выпускных и&nbsp;научных работ на&nbsp;заказ. Сформировали сильную команду авторов, кандидатов, докторов наук, собственный отдел технического контроля и&nbsp;отдела по&nbsp;качеству. Мы&nbsp;беремся за&nbsp;выполнение нестандартных и&nbsp;самых сложных заказов, например, технические направления. Наш опыт поможет вам качественно и&nbsp;в&nbsp;срок написать работу.
+                    ._bottom-item
+                        ._bottom-heading 18&nbsp;городов
+                        ._bottom-text Наши офисы находятся во&nbsp;всех крупнейших городах РФ. Хотите прийти лично и&nbsp;оформить заказ в&nbsp;офисе? Оформляем официальный договор и&nbsp;кассовый чек. Мы&nbsp;&mdash; за&nbsp;честные отношения.
+        section.our-jobs
+            ._container.container
+                h2._title.h2 За 17 лет мы выполнили:
+                ._items
+                    ._item
+                        ._item-num 100 000
+                        ._item-text дипломов и ВКР
+                    ._item
+                        ._item-num 20 000
+                        ._item-text магистерских диссертаций
+                    ._item
+                        ._item-num 300
+                        ._item-text кандидатских диссертаций
+                    ._item
+                        ._item-num 25
+                        ._item-text докторских диссертаций
+        section.lead-magnet
+            ._inner
+                h2._title.h2 Узнайте стоимость консультации!
+                form(action="https://www.work5.ru/orders")._form
+                    ._form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                    ._form-item.-double
+                        button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                        .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                    input(type="hidden" name="act" value="services").hidden
+                    ._form-item
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+        section.subjects-list
+            ._container.container
+                h2.h2 Предметы
+                ._items.js-hide-some(data-max-items="9" data-items-to-show="10")
+                    ._item
+                        ._letter А
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Б
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter В
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Г
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Д
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Е
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ж
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter И
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter К
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Л
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter М
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Н
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Н
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Р
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter С
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Т
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter У
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ф
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Х
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ч
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Э
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Я
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление

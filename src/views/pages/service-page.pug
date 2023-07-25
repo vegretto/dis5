@@ -1,0 +1,909 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .service-pg.pg-wrapper
+        section.main-banner
+            ._container.container
+                ._inner
+                    h1._title.h1 Заказать дипломную работу от&nbsp;сервиса #[span.txt-purple №1&nbsp;в&nbsp;России]
+                    ._cols
+                        ._col
+                            ._heading Диплом (ВКР) на заказ
+                            ._line Цена: #[span.txt-semi-bold от 11 900 р]
+                            ._line Срок: #[span.txt-semi-bold от 2 дней]
+                            ._line Доработки #[span.txt-semi-bold бесплатно]
+
+            ._bg
+                +pictureAdaptive('main-banner-bg', 'png', 1920, 756, 600)
+        section.order-form
+            ._container.container
+                form(action="https://www.work5.ru/orders")._form
+                    ._form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                    ._form-item
+                        button(type="submit")._order-btn.common-btn.common-btn--purple Узнать стоимость
+                    ._form-item.-license-info
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+                    ._form-item
+                        ._promocode-wrapper
+                            ._promocode-toggle.js-show-promocode У меня есть промокод
+                            input(type="text" name="promocode" placeholder="Промокод")._input.common-input.hidden.js-promocode-input
+                    input(type="hidden" name="act" value="services").hidden
+        section.features
+            ._container.container
+                ._items
+                    ._item
+                        ._item-img-wrapper
+                            +picture('features1', 'png', 42, 42)
+                        ._item-text Подберем лучшего исполнителя по&nbsp;вашему предмету. Вам не&nbsp;придется заниматься поиском автора и&nbsp;обсуждением деталей заказа.
+                    ._item
+                        ._item-img-wrapper
+                            +picture('features2', 'png', 42, 42)
+                        ._item-text Проконтролируем автора по&nbsp;срокам и&nbsp;качеству. Наш отдел качества проверит заказ на&nbsp;соответствие требованиям и&nbsp;МУ.
+                    ._item
+                        ._item-img-wrapper
+                            +picture('features3', 'png', 42, 42)
+                        ._item-text Хотите проконтролировать ход написания работы? Выдадим работу по&nbsp;главам, после согласования приступим к&nbsp;следующей.
+                    ._item
+                        ._item-img-wrapper
+                            +picture('features4', 'png', 42, 42)
+                        ._item-text Не&nbsp;знаете с&nbsp;чего начать? Выполним план к&nbsp;вашей работе бесплатно, после согласования приступим к&nbsp;выполнению работы.
+        section.advantages
+            ._container.container
+                h2.h2 Почему выбирают Studsovet
+                ._items
+                    ._item
+                        ._item-heading №1
+                        ._item-text По&nbsp;количеству оффлайн-офисов в&nbsp;20&nbsp;городах России
+                    ._item
+                        ._item-heading 4 000+
+                        ._item-text Специализируемся на&nbsp;выполнении сложных и&nbsp;нестандартных работ
+                    ._item
+                        ._item-heading 100 000+
+                        ._item-text выполненных дипломов и&nbsp;диссертаций
+                    ._item
+                        ._item-heading 4,9 оценка
+                        ._item-text средние оценки по&nbsp;результатам опросов&nbsp;клиентов
+                    ._item
+                        ._item-heading 16
+                        ._item-text лет помогаем вам достигать целей в&nbsp;учёбе
+                    ._item
+                        ._item-heading 24 / 7
+                        ._item-text ваш персональный менеджер всегда на&nbsp;связи
+        section.lead-magnet
+            ._inner
+                h2._title.h2 Узнайте стоимость консультации!
+                form(action="https://www.work5.ru/orders")._form
+                    ._form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                    ._form-item.-double
+                        button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                        .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                    input(type="hidden" name="act" value="services").hidden
+                    ._form-item
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+        section.diplom-details
+            ._container.container
+                h2._title.h2 Мы лидеры рынка, поэтому можем предложить выгодные цены и&nbsp;короткие сроки
+                .service-details
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Дипломная работа для&nbsp;вуза&nbsp;(ВКР)
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Дипломная работа для&nbsp;колледжа
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Глава дипломной работы
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Диплом MBA
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--purple Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+        section.diplom-additional-services
+            ._container.container
+                h2._title.h2 Дополнительные услуги по&nbsp;диплому
+                .additional-services.js-hide-some(data-max-items="8" data-items-to-show="10")
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+        section.disser-details
+            ._container.container
+                h2._title.h2 Диссертации
+                .service-details.-dark
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Аспирантской диссертации
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--black Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Аспирантской диссертации
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--black Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Аспирантской диссертации
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--black Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+                    ._item
+                        ._item-type Консультация
+                        ._item-heading Аспирантской диссертации
+                        ._devider
+                        ._item-details
+                            ._item-details-item Срок выполнения: #[span.txt-semi-bold от 12 часов]
+                            ._item-details-item Средняя оценка: #[span.txt-semi-bold 4.9 /  5]
+                            ._item-details-item Выполнено: #[span.txt-semi-bold 114 671 консультация]
+                        ._item-price от 2 000 р.
+                        ._item-bottom
+                            a(href="#")._item-btn.common-btn.common-btn--black Узнать стоимость
+                            a(href="#")._item-testimonials-box
+                                ._item-testimonials-img-wrapper
+                                    +picture('comments', 'png', 20, 20)
+                                span._item-testimonials-text 2074&nbsp;отзыва
+        section.disser-additional-services
+            ._container.container
+                h2._title.h2 Дополнительные услуги по&nbsp;диссертациям
+                .additional-services.js-hide-some(data-max-items="8" data-items-to-show="10")
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+                    ._item
+                        ._item-content
+                            ._item-heading Бесплатный план к&nbsp;диплому
+                            ._item-details от 2 000 р. / от 4 часов
+                        a(href="#")._item-btn.common-btn.common-btn--white Подробнее
+        section.how-it-works
+            ._container.container
+                h2._title.h2 Как это работает
+                ._items
+                    ._item
+                        ._item-number 1
+                        ._item-text Оформляете услугу на&nbsp;сайте<br> или в&nbsp;оффлайн-офисе. Стоимость видна сразу.
+                    ._item
+                        ._item-number 2
+                        ._item-text Оплачиваете 50% заказа и&nbsp;мы приступаем<br> к&nbsp;выполнению.
+                    ._item
+                        ._item-number 3
+                        ._item-text Согласовываем план работы<br> и&nbsp;начинаем писать.
+                    ._item
+                        ._item-number 4
+                        ._item-text В удобном личном кабинете вы&nbsp;можете отслеживать статус выполнение заказа, задавать вопросы, контролировать промежуточные результаты.
+                    ._item
+                        ._item-number 5
+                        ._item-text После выполнения работы, наш отдел<br>качества и проверит ее на&nbsp;соответствие<br> ГОСТ, МУ, антиплагиату, вашим<br> требованиям.
+                    ._item
+                        ._item-number 6
+                        ._item-text Вы оплачиваете остальную часть работы и&nbsp;скачиваете ее в&nbsp;личном кабинете.
+                    ._item
+                        ._item-number 7
+                        ._item-text Сдаете работу и получаете оценку :)
+        section.lead-magnet.-two
+            ._inner
+                ._col.-first
+                    h2._title.h2 Поможем с работой любого уровня сложности!
+                ._col.-second
+                    form(action="https://www.work5.ru/orders")._form
+                        ._form-item
+                            .select-wrapper
+                                select(name="type_work").js-search-select.hidden
+                                    option(value="") Тип работы
+                                    option(value="diplom") Диссертация
+                                    option(value="diplom") Диплом
+                                    option(value="diplom") Реферат
+                        ._form-item
+                            input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                        ._form-item.-double
+                            button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                            .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                        input(type="hidden" name="act" value="services").hidden
+                        ._form-item
+                            .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+        section.warranties
+            ._container.container
+                h2.h2 Гарантии
+                ._items
+                    ._item
+                        ._item-heading Оригинальность
+                        ._item-text Все дипломные работы и&nbsp;диссертации проходят проверку на&nbsp;антиплагиат. Мы&nbsp;гарантируем, что&nbsp;ваша&nbsp;работа будет уникальной и&nbsp;%&nbsp;оригинальности не&nbsp;ниже выбранного при оформлении заказа.
+                    ._item
+                        ._item-heading Бесплатная доработка
+                        ._item-text Преподаватель просит внести правки? Если потребуется, выполним бесплатно в&nbsp;рамках ваших&nbsp;первоначальных требований к&nbsp;заказу.
+                    ._item
+                        ._item-heading Соблюдение сроков
+                        ._item-text Мы&nbsp;понимаем, как важно получить работу точно&nbsp;в&nbsp;срок. Поэтому мы&nbsp;никогда не&nbsp;задерживаем&nbsp;сроки написаний дипломных&nbsp;и&nbsp;диссертаций.
+                    ._item
+                        ._item-heading Конфиденциальность
+                        ._item-text Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.
+                    ._item
+                        ._item-heading Договор/оферта
+                        ._item-text Мы&nbsp;оказываем услуги официально.<br>Заключаем договор в&nbsp;оффлайн-офисе или оферту&nbsp;на&nbsp;сайте.
+        section.work-examples
+            ._container.container
+                h2._title.h2 Примеры выполненных работ
+                ._slider.swiper-slider.js-work-examples-slider
+                    ._swiper-wrapper.swiper-wrapper
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                a(href="#")._item-subject Гражданское право
+                                ._item-heading Компенсация морального вреда как мера гражданско-правовой ответственности
+                                ._details
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Срок выполнения
+                                        ._details-item-value 10 дней
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Оригинальность
+                                        ._details-item-value 93%
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Гарантия
+                                        ._details-item-value 1 месяц
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Стоимость
+                                        ._details-item-value 3 000 р
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Кэшбек 10%
+                                        ._details-item-value 300 р
+                                a(href="#" target="_blank")._item-link.common-btn.common-btn--white Посмотреть работу в PDF
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                a(href="#")._item-subject Гражданское право
+                                ._item-heading Компенсация морального вреда как мера гражданско-правовой ответственности
+                                ._details
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Срок выполнения
+                                        ._details-item-value 10 дней
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Оригинальность
+                                        ._details-item-value 93%
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Гарантия
+                                        ._details-item-value 1 месяц
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Стоимость
+                                        ._details-item-value 3 000 р
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Кэшбек 10%
+                                        ._details-item-value 300 р
+                                a(href="#" target="_blank")._item-link.common-btn.common-btn--white Посмотреть работу в PDF
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                a(href="#")._item-subject Гражданское право
+                                ._item-heading Компенсация морального вреда как мера гражданско-правовой ответственности
+                                ._details
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Срок выполнения
+                                        ._details-item-value 10 дней
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Оригинальность
+                                        ._details-item-value 93%
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Гарантия
+                                        ._details-item-value 1 месяц
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Стоимость
+                                        ._details-item-value 3 000 р
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Кэшбек 10%
+                                        ._details-item-value 300 р
+                                a(href="#" target="_blank")._item-link.common-btn.common-btn--white Посмотреть работу в PDF
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                a(href="#")._item-subject Гражданское право
+                                ._item-heading Компенсация морального вреда как мера гражданско-правовой ответственности
+                                ._details
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Срок выполнения
+                                        ._details-item-value 10 дней
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Оригинальность
+                                        ._details-item-value 93%
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Гарантия
+                                        ._details-item-value 1 месяц
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Стоимость
+                                        ._details-item-value 3 000 р
+                                    ._details-item
+                                        ._details-item-name
+                                            +icon('check')
+                                            ._details-item-name-text Кэшбек 10%
+                                        ._details-item-value 300 р
+                                a(href="#" target="_blank")._item-link.common-btn.common-btn--white Посмотреть работу в PDF
+        section.testimonials
+            ._container.container
+                h2._title.h2 Отзывы
+                ._top
+                    ._top-item
+                        ._top-heading
+                            +icon('star')
+                            ._top-heading-text 4.9
+                        ._top-text Средняя оценка:
+                    ._top-item
+                        ._top-heading
+                            ._top-heading-text 10 000+
+                        ._top-text Общее кол-во отзывов:
+                ._slider.swiper-slider.js-testimonials-slider
+                    ._swiper-wrapper.swiper-wrapper
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar1', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar2', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar.-placeholder
+                                        ._item-avatar-letter И
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar1', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                    .swiper-buttons-wrapper
+                        .swiper-button.swiper-button--prev
+                            +icon('arrow-right')
+                        .swiper-button.swiper-button--next
+                            +icon('arrow-right')
+        section.ratings
+            ._container.container
+                h2._title.h2 Оценки на&nbsp;сайтах-&#8288;отзовиках
+                ._items
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo1', 'png', 131, 52)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo1', 'png', 131, 52)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo2', 'png', 133, 44)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo3', 'png', 124, 48)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo4', 'png', 158, 38)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo5', 'png', 187, 44)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+        section.authors-features
+            ._container.container
+                ._inner
+                    h2._title.h2 Вам не&nbsp;надо тратить время на&nbsp;поиск<br> подходящего автора, мы отобрали сильнейших!
+                    ._items
+                        ._item.-first Диссертациями и&nbsp;дипломами занимаются только лучшие специалисты
+                        ._item.-second При подборе автора учитываем опыт работы по&nbsp;вашему предмету, оценку его работы другими клиентами, сдачу в&nbsp;срок, отсутствие доработок
+                        ._item.-third Диссертации выполняют кандидаты и&nbsp;доктора наук. С&nbsp;автором можно пообщаться по&nbsp;конференц-связи
+                    ._img-wrapper
+                        +pictureAdaptive('authors-features', 'png', 550, 523, 399)
+        section.faq
+            ._container.container
+                h2._title.h2 Вопросы и ответы
+                ._items
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text Вы заключаете договор?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text Какие даете гарантии на работу?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text В каком виде я получаю работу?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text При выполнении предоплаты, могу ли я доверять<br> вам мою личную информацию?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text Если работа меня не устроит смогу ли я вернуть деньги?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+                    ._item
+                        ._head.js-accordion-toggle
+                            ._head-text Можно ли пообщаться с автором напрямую?
+                            ._head-btn
+                                +icon('arrow-down')
+                        ._body.js-accordion-head
+                            ._body-text Гарантируем что работа будет выполнена в рамках оформленного задания, если потребуется доработки - вносим бесплатно в рамках первоначальных требований.
+        section.subjects-list
+            ._container.container
+                h2.h2 Предметы
+                ._items.js-hide-some(data-max-items="9" data-items-to-show="10")
+                    ._item
+                        ._letter А
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Б
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter В
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Г
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Д
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Е
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ж
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter И
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter К
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Л
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter М
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Н
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Н
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Р
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter С
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Т
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter У
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ф
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Х
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Ч
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Э
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+                    ._item
+                        ._letter Я
+                        ._links
+                            a(href="#")._link Антикризисное управление
+                            a(href="#")._link Антикризисное управление
+        section.contacts
+            ._container.container
+                h2._title.h2 Наши оффлайн-офисы во всех крупнейших городах России
+                ._subtext У нас есть офисы в 20 городах России.
+                ._contacts-items
+                    ._contacts-item.-phone
+                        +icon('phone')
+                        a(href="tel:+70000000000")._contacts-item-text +7 (---) ---_--_--
+                    ._contacts-item.-mail
+                        +icon('envelope')
+                        a(href='mailto:name@gmail.com')._contacts-item-text name@gmail.com
+                    ._contacts-item.-link
+                        ._contacts-item-text Наша страница контактов: #[a(href="mailto:client@work5.ru") client@work5.ru]
+                ._map#mainMap
+                    ._map-ph
+                        +pictureAdaptive1x('main-map-ph', 'png', 1660, 600, 767)
+                ._bottom
+                    ._bottom-col.-left
+                        ._advantages
+                            ._advantages-item
+                                ._advantages-heading Профессионально
+                                ._advantages-text Мы&nbsp;гарантируем высокое качество консультаций, так как наши специалисты обладают высокой квалификацией и&nbsp;проходят тщательный тестовый отбор. Только 2&nbsp;из&nbsp;10 репетиторов приступают к&nbsp;консультациям.
+                            ._advantages-item
+                                ._advantages-heading Надежно
+                                ._advantages-text Каждый заказ, оформленный на&nbsp;нашей платформе, контролируется персональным менеджером. Благодаря тщательному контролю, вы&nbsp;гарантированно получаете качественную консультацию. Наш отдел технического контроля проверит работу на&nbsp;соответствие МУ, ГОСТ, антиплагиат.
+                            ._advantages-item
+                                ._advantages-heading Удобно
+                                ._advantages-text Вы&nbsp;всегда можете узнать о&nbsp;процессе выполнения консультации и&nbsp;задать вопрос в&nbsp;режиме &laquo;онлайн&raquo; в&nbsp;личном кабинете.
+                    ._bottom-col.-right
+                        ._info-items
+                            ._info-item
+                                ._info-item-heading Консультант:
+                                ._info-item-text Специалист с опытом
+                            ._info-item
+                                ._info-item-heading Гарантия на консультацию:
+                                ._info-item-text До&nbsp;6&nbsp;месяцев
+                            ._info-item
+                                ._info-item-heading Срок консультации:
+                                ._info-item-text от 2-х&nbsp;часов
+                            ._info-item
+                                ._info-item-heading Оригинальность:
+                                ._info-item-text Высокая
+                            ._info-item
+                                ._info-item-heading Цена:
+                                ._info-item-text от 2&nbsp;500&nbsp;руб.
+                            ._info-item
+                                ._info-item-heading Доработки:
+                                ._info-item-text Бесплатно
+                            ._info-item
+                                ._info-item-heading Анонимность:
+                                ._info-item-text &#9989;
+                            ._info-item
+                                ._info-item-heading Кэшбек за консультацию:
+                                ._info-item-text 10%
+        section.lead-magnet
+            ._inner
+                h2._title.h2 Узнайте стоимость консультации!
+                form(action="https://www.work5.ru/orders")._form
+                    ._form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
+                    ._form-item.-double
+                        button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                        .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                    input(type="hidden" name="act" value="services").hidden
+                    ._form-item
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]

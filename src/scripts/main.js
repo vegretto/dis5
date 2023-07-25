@@ -115,10 +115,27 @@ $(document).ready(function () {
     const testimonialsSlider = new Swiper('.js-testimonials-slider', {
         slidesPerView: 1,
         loop: true,
+        autoHeight: true,
         navigation: {
             prevEl: '.swiper-button--prev',
             nextEl: '.swiper-button--next',
         },
+        breakpoints: {
+            992: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            1365: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            },
+        }
+    });
+
+    const workExamplesSlider = new Swiper('.js-work-examples-slider', {
+        slidesPerView: 1,
+        loop: true,
+        autoHeight: true,
         breakpoints: {
             992: {
                 slidesPerView: 2,
