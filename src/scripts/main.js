@@ -213,6 +213,70 @@ $(document).ready(function () {
     } else {
         window.addEventListener('scroll', checkMapVisibility, {passive: true});
     }
+
+    const validateInput = (input, inputValue, inputType) => {
+        let errorMessage = ''
+        if (validator.isEmpty(inputValue)) {
+            errorMessage = "Необходимо заполнить"
+            return errorMessage
+        }
+        switch (inputType) {
+            case 'email':
+                if (!validator.isEmail(inputValue)) errorMessage = 'Не похоже на e-mail'
+                break
+            default:
+                break
+        }
+        return errorMessage
+    }
+
+    const renderError = (element, errorText) => {
+        element.addClass('has-error')
+        element.next('.validation-error').remove()
+        element.after(`<div class="validation-error">${errorText}</div>`)
+        setTimeout(function () {
+            element.next('.validation-error').remove()
+        }, 5000)
+    }
+
+    const removeError = (element) => {
+        element.removeClass('has-error')
+        element.next('.validation-error').remove()
+    }
+
+    $('.js-validator').on('submit', function (e) {
+        const inputs = $(this).find('.js-input-required')
+        inputs.each(function () {
+            const inputValue = $(this).val()
+            const inputType = $(this).attr('data-validator-type')
+            const errorMessage = validateInput($(this), inputValue, inputType)
+
+            if (!validator.isEmpty(errorMessage)) {
+                e.preventDefault()
+                renderError($(this), errorMessage)
+            } else {
+                removeError($(this))
+            }
+        })
+    })
+
+    const renderContacts = (cityName, jsonPath) => {
+        $.getJSON(jsonPath, function(data) {
+            const currentCity = data.find(city => city.name === cityName)
+            const [phone, mail] = [currentCity.phone, currentCity.mail]
+            const sanitizedPhone = phone.replace(/\W/g, '')
+            $('.js-contacts-phone').text(phone).attr('href', `tel:${sanitizedPhone}`).removeClass('placeholder')
+            $('.js-contacts-mail').text(mail).attr('href', `mailto:${mail}`).removeClass('placeholder')
+
+
+
+        })
+    }
+
+    if ($('.contacts-pg').length > 0) {
+        renderContacts('Владивосток', './data/contacts.json')
+    }
+
 });
 
 

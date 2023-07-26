@@ -1,3 +1,7 @@
+.form-item {
+  position: relative;
+}
+
 .common-input {
   width: 100%;
   background-color: $white;
@@ -14,9 +18,18 @@
   &::placeholder {
     color: #9fa0a3;
   }
+
+  &.has-error {
+    border-color: #f00;
+  }
 }
 
 .select-wrapper {
+
+  .select2 {
+    border: 1px solid $transparent;
+    border-radius: 15px;
+  }
 
   .select2-selection {
     border-color: $transparent;
@@ -54,7 +67,7 @@
 
   .select2-selection__rendered {
     background-color: $white;
-    padding: 25px 30px !important;
+    padding: 24px 30px !important;
     font-weight: 600;
     font-size: 18px !important;
     line-height: 22px !important;
@@ -76,5 +89,40 @@
 
   .select2-results__option--highlighted {
     background-color: $template-purple !important;
+  }
+
+  .validation-error + .select2 {
+    border-color: #f00;
+  }
+
+  .has-error + .select2 {
+    border-color: #f00;
+  }
+}
+
+.validation-error {
+  position: absolute;
+  bottom: -40px;
+  right: 10px;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 10px 20px;
+  color: #f00;
+  background-color: $white;
+  border: 1px solid #ccc;
+  z-index: 1;
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    left: 15px;
+    top: -5px;
+    transform: rotate(45deg);
+    border: 1px solid #ccc;
+    clip-path: polygon(0 0, 0% 100%, 100% 0);
   }
 }

@@ -23,21 +23,21 @@ block content
                 +pictureAdaptive('main-banner-bg', 'png', 1920, 756, 600)
         section.order-form
             ._container.container
-                form(action="https://www.work5.ru/orders")._form
-                    ._form-item
+                form(action="https://www.work5.ru/orders")._form.js-validator
+                    ._form-item.form-item
                         .select-wrapper
-                            select(name="type_work").js-search-select.hidden
+                            select(name="type_work").js-search-select.js-input-required.hidden
                                 option(value="") Тип работы
                                 option(value="diplom") Диссертация
                                 option(value="diplom") Диплом
                                 option(value="diplom") Реферат
-                    ._form-item
-                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
-                    ._form-item
+                    ._form-item.form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                    ._form-item.form-item
                         button(type="submit")._order-btn.common-btn.common-btn--purple Узнать стоимость
-                    ._form-item.-license-info
+                    ._form-item.form-item.-license-info
                         .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
-                    ._form-item
+                    ._form-item.form-item
                         ._promocode-wrapper
                             ._promocode-toggle.js-show-promocode У меня есть промокод
                             input(type="text" name="promocode" placeholder="Промокод")._input.common-input.hidden.js-promocode-input
@@ -86,21 +86,21 @@ block content
         section.lead-magnet
             ._inner
                 h2._title.h2 Узнайте стоимость консультации!
-                form(action="https://www.work5.ru/orders")._form
-                    ._form-item
+                form(action="https://www.work5.ru/orders")._form.js-validator
+                    ._form-item.form-item
                         .select-wrapper
-                            select(name="type_work").js-search-select.hidden
+                            select(name="type_work").js-search-select.js-input-required.hidden
                                 option(value="") Тип работы
                                 option(value="diplom") Диссертация
                                 option(value="diplom") Диплом
                                 option(value="diplom") Реферат
-                    ._form-item
-                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
-                    ._form-item.-double
+                    ._form-item.form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                    ._form-item.form-item.-double
                         button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
                         .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
                     input(type="hidden" name="act" value="services").hidden
-                    ._form-item
+                    ._form-item.form-item
                         .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
         section.diplom-details
             ._container.container
@@ -392,13 +392,15 @@ block content
             ._container.container
                 ._inner
                     h2._title.h2 Напишем план для вашей работы #[span.txt-purple бесплатно]
-                    form._form
-                        ._form-item.-email
-                            input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
-                        ._form-item.-btn
+                    form(action="https://www.work5.ru/orders")._form.js-validator
+                        ._form-item.form-item.-email
+                            input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                        ._form-item.form-item.-btn
                             button(type="submit")._sumbit-btn.common-btn.common-btn--purple Получить план
-                        ._form-item
+                        ._form-item.form-item
                             .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
+                        input(type="hidden" name="act" value="services").hidden
+                        input(type="hidden" name="type_work" value="free_plan").hidden
                 ._img-wrapper
                     +pictureAdaptive('lead-magnet-fp', 'png', 997, 544, 480)
         section.warranties
@@ -641,21 +643,21 @@ block content
                 ._col.-first
                     h2._title.h2 Поможем с работой любого уровня сложности!
                 ._col.-second
-                    form(action="https://www.work5.ru/orders")._form
-                        ._form-item
+                    form(action="https://www.work5.ru/orders")._form.js-validator
+                        ._form-item.form-item
                             .select-wrapper
-                                select(name="type_work").js-search-select.hidden
+                                select(name="type_work").js-search-select.js-input-required.hidden
                                     option(value="") Тип работы
                                     option(value="diplom") Диссертация
                                     option(value="diplom") Диплом
                                     option(value="diplom") Реферат
-                        ._form-item
-                            input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
-                        ._form-item.-double
+                        ._form-item.form-item
+                            input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                        ._form-item.form-item.-double
                             button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
                             .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
                         input(type="hidden" name="act" value="services").hidden
-                        ._form-item
+                        ._form-item.form-item
                             .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
 
 

@@ -34,21 +34,21 @@ block content
         section.lead-magnet
             ._inner
                 h2._title.h2 Узнайте стоимость консультации!
-                form(action="https://www.work5.ru/orders")._form
-                    ._form-item
+                form(action="https://www.work5.ru/orders")._form.js-validator
+                    ._form-item.form-item
                         .select-wrapper
-                            select(name="type_work").js-search-select.hidden
+                            select(name="type_work").js-search-select.js-input-required.hidden
                                 option(value="") Тип работы
                                 option(value="diplom") Диссертация
                                 option(value="diplom") Диплом
                                 option(value="diplom") Реферат
-                    ._form-item
-                        input(type="text" name="email" placeholder="Ваш электронный адрес").common-input
-                    ._form-item.-double
+                    ._form-item.form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                    ._form-item.form-item.-double
                         button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
                         .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
                     input(type="hidden" name="act" value="services").hidden
-                    ._form-item
+                    ._form-item.form-item
                         .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]
         section.subjects-list
             ._container.container

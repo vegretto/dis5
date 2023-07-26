@@ -11,6 +11,7 @@
 		<link rel="preload" href="/fonts/Inter/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
 		<link rel="preload" href="/scripts/vendor.min.js" as="script">
+		<link rel="preload" href="/scripts/vendor/validator.min.js" as="script">
 		<link rel="preload" href="/scripts/main.min.js" as="script">
 	</head>
 	<body>
@@ -117,10 +118,10 @@
 			</section>
 			<section class="order-form">
 				<div class="order-form__container container">
-					<form class="order-form__form" action="https://www.work5.ru/orders">
-						<div class="order-form__form-item">
+					<form class="order-form__form js-validator" action="https://www.work5.ru/orders">
+						<div class="order-form__form-item form-item">
 							<div class="select-wrapper">
-								<select class="js-search-select hidden" name="type_work">
+								<select class="js-search-select js-input-required hidden" name="type_work">
 									<option value="">Тип работы</option>
 									<option value="diplom">Диссертация</option>
 									<option value="diplom">Диплом</option>
@@ -128,16 +129,16 @@
 								</select>
 							</div>
 						</div>
-						<div class="order-form__form-item">
-							<input class="common-input" type="text" name="email" placeholder="Ваш электронный адрес">
+						<div class="order-form__form-item form-item">
+							<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 						</div>
-						<div class="order-form__form-item">
+						<div class="order-form__form-item form-item">
 							<button class="order-form__order-btn common-btn common-btn--purple" type="submit">Узнать стоимость</button>
 						</div>
-						<div class="order-form__form-item order-form__form-item--license-info">
+						<div class="order-form__form-item form-item order-form__form-item--license-info">
 							<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
 						</div>
-						<div class="order-form__form-item">
+						<div class="order-form__form-item form-item">
 							<div class="order-form__promocode-wrapper">
 								<div class="order-form__promocode-toggle js-show-promocode">У меня есть промокод</div>
 								<input class="order-form__input common-input hidden js-promocode-input" type="text" name="promocode" placeholder="Промокод">
@@ -219,10 +220,10 @@
 			<section class="lead-magnet">
 				<div class="lead-magnet__inner">
 					<h2 class="lead-magnet__title h2">Узнайте стоимость консультации!</h2>
-					<form class="lead-magnet__form" action="https://www.work5.ru/orders">
-						<div class="lead-magnet__form-item">
+					<form class="lead-magnet__form js-validator" action="https://www.work5.ru/orders">
+						<div class="lead-magnet__form-item form-item">
 							<div class="select-wrapper">
-								<select class="js-search-select hidden" name="type_work">
+								<select class="js-search-select js-input-required hidden" name="type_work">
 									<option value="">Тип работы</option>
 									<option value="diplom">Диссертация</option>
 									<option value="diplom">Диплом</option>
@@ -230,15 +231,15 @@
 								</select>
 							</div>
 						</div>
-						<div class="lead-magnet__form-item">
-							<input class="common-input" type="text" name="email" placeholder="Ваш электронный адрес">
+						<div class="lead-magnet__form-item form-item">
+							<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 						</div>
-						<div class="lead-magnet__form-item lead-magnet__form-item--double">
+						<div class="lead-magnet__form-item form-item lead-magnet__form-item--double">
 							<button class="lead-magnet__submit-btn common-btn common-btn--black" type="submit">Узнать стоимость</button>
 							<div class="form-disclaimer">Это бесплатно и займет 1&nbsp;минуту</div>
 						</div>
 						<input class="hidden" type="hidden" name="act" value="services">
-						<div class="lead-magnet__form-item">
+						<div class="lead-magnet__form-item form-item">
 							<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной&nbsp;оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
 						</div>
 					</form>
@@ -599,10 +600,10 @@
 						<h2 class="lead-magnet__title h2">Поможем с работой любого уровня сложности!</h2>
 					</div>
 					<div class="lead-magnet__col lead-magnet__col--second">
-						<form class="lead-magnet__form" action="https://www.work5.ru/orders">
-							<div class="lead-magnet__form-item">
+						<form class="lead-magnet__form js-validator" action="https://www.work5.ru/orders">
+							<div class="lead-magnet__form-item form-item">
 								<div class="select-wrapper">
-									<select class="js-search-select hidden" name="type_work">
+									<select class="js-search-select js-input-required hidden" name="type_work">
 										<option value="">Тип работы</option>
 										<option value="diplom">Диссертация</option>
 										<option value="diplom">Диплом</option>
@@ -610,15 +611,15 @@
 									</select>
 								</div>
 							</div>
-							<div class="lead-magnet__form-item">
-								<input class="common-input" type="text" name="email" placeholder="Ваш электронный адрес">
+							<div class="lead-magnet__form-item form-item">
+								<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 							</div>
-							<div class="lead-magnet__form-item lead-magnet__form-item--double">
+							<div class="lead-magnet__form-item form-item lead-magnet__form-item--double">
 								<button class="lead-magnet__submit-btn common-btn common-btn--black" type="submit">Узнать стоимость</button>
 								<div class="form-disclaimer">Это бесплатно и займет 1&nbsp;минуту</div>
 							</div>
 							<input class="hidden" type="hidden" name="act" value="services">
-							<div class="lead-magnet__form-item">
+							<div class="lead-magnet__form-item form-item">
 								<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной&nbsp;оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
 							</div>
 						</form>
@@ -1364,10 +1365,10 @@
 			<section class="lead-magnet">
 				<div class="lead-magnet__inner">
 					<h2 class="lead-magnet__title h2">Узнайте стоимость консультации!</h2>
-					<form class="lead-magnet__form" action="https://www.work5.ru/orders">
-						<div class="lead-magnet__form-item">
+					<form class="lead-magnet__form js-validator" action="https://www.work5.ru/orders">
+						<div class="lead-magnet__form-item form-item">
 							<div class="select-wrapper">
-								<select class="js-search-select hidden" name="type_work">
+								<select class="js-search-select js-input-required hidden" name="type_work">
 									<option value="">Тип работы</option>
 									<option value="diplom">Диссертация</option>
 									<option value="diplom">Диплом</option>
@@ -1375,15 +1376,15 @@
 								</select>
 							</div>
 						</div>
-						<div class="lead-magnet__form-item">
-							<input class="common-input" type="text" name="email" placeholder="Ваш электронный адрес">
+						<div class="lead-magnet__form-item form-item">
+							<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 						</div>
-						<div class="lead-magnet__form-item lead-magnet__form-item--double">
+						<div class="lead-magnet__form-item form-item lead-magnet__form-item--double">
 							<button class="lead-magnet__submit-btn common-btn common-btn--black" type="submit">Узнать стоимость</button>
 							<div class="form-disclaimer">Это бесплатно и займет 1&nbsp;минуту</div>
 						</div>
 						<input class="hidden" type="hidden" name="act" value="services">
-						<div class="lead-magnet__form-item">
+						<div class="lead-magnet__form-item form-item">
 							<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной&nbsp;оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
 						</div>
 					</form>
@@ -1413,7 +1414,7 @@
 						<div class="footer__subscribe-box">
 							<div class="footer__subscribe-heading">Подписаться на акции и&nbsp;бонусы</div>
 							<div class="footer__subscribe-inputs">
-								<input class="common-input footer__email-input" type="text" name="email" placeholder="Ваш электронный адрес">
+								<input class="common-input js-input-required footer__email-input" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 								<button class="footer__submit-btn common-btn common-btn--purple" type="submit">Подписаться</button>
 							</div>
 						</div>
@@ -1539,6 +1540,7 @@
 			</div>
 		</div>
 		<script src="/scripts/vendor.min.js"></script>
+		<script src="/scripts/vendor/validator.min.js"></script>
 		<script src="/scripts/main.min.js"></script>
 	</body>
 </html>

@@ -1,0 +1,54 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .contacts-pg.pg-wrapper
+        section.contacts-main
+            ._container.container
+                h1._title.h1 Контакты
+                ._items
+                    ._item
+                        ._item-icon
+                            +icon('phone')
+                        a(href="tel:80000000000")._item-link.placeholder.js-contacts-phone 8(000)000-00-00
+                        ._item-text Телефон
+                    ._item
+                        ._item-icon
+                            +icon('envelope')
+                        a(href="mailto:name@gmail.com")._item-link.placeholder.js-contacts-mail name@gmail.com
+                        ._item-text Электронная почта
+                    ._item
+                        ._item-icon
+                            +icon('tg')
+                        a(href="#")._item-link.-purple Телеграм
+                        ._item-text Соц.сети
+                    ._item
+                        ._item-icon
+                            +icon('vk')
+                        a(href="#")._item-link.-purple Вконтакте
+        section.contacts-cities
+            ._container.container
+                ._items
+                    ._item
+                        ._item-letter В
+                        ._item-city Владивосток
+                        ._item-city Воронеж
+                    ._item
+                        ._item-letter Е
+                        ._item-city Екатеринбург
+                    ._item
+                        ._item-letter Е
+                        ._item-city Иркутск
+                    ._item
+                        ._item-letter В
+                        ._item-city Владивосток
+                        ._item-city Воронеж
+                    ._item
+                        ._item-letter Е
+                        ._item-city Екатеринбург
+                    ._item
+                        ._item-letter Е
+                        ._item-city Иркутск
+                    ._item
+                        ._item-letter Е
+                        ._item-city Иркутск
