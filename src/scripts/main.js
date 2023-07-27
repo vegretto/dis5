@@ -267,14 +267,44 @@ $(document).ready(function () {
             const sanitizedPhone = phone.replace(/\W/g, '')
             $('.js-contacts-phone').text(phone).attr('href', `tel:${sanitizedPhone}`).removeClass('placeholder')
             $('.js-contacts-mail').text(mail).attr('href', `mailto:${mail}`).removeClass('placeholder')
-
-
-
         })
     }
 
     if ($('.contacts-pg').length > 0) {
         renderContacts('Владивосток', './data/contacts.json')
+    }
+
+    if ($('.js-cities-list').length > 0) {
+        const letters = []
+        $.getJSON('./data/contacts.json', function(data) {
+            data.forEach(city => {
+                const firstLetter = city.name.charAt(0)
+                if (!letters.includes(firstLetter)) letters.push(firstLetter)
+            })
+
+            letters.sort()
+
+            letters.forEach(letter => {
+                const citiesItems = data.reduce((result, city) => {
+                    if (city.name.charAt(0) === letter) {
+                        result.push(`<div class="contacts-cities__item-city js-render-contacts">${city.name}</div>`)
+                    }
+                    return result
+                }, [])
+
+                const cityItem = `
+                <div class="contacts-cities__item">
+                    <div class="contacts-cities__item-letter">${letter}</div>
+                    ${citiesItems.join("")}
+                </div>`
+
+                $('.js-cities-list').append(cityItem)
+            })
+        })
+
+        $(document).on('click', '.js-render-contacts', function () {
+            renderContacts($(this).text(), './data/contacts.json')
+        })
     }
 
 });

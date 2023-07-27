@@ -763,6 +763,50 @@ section {
       line-height: 19px;
     }
   }
+
+  &.warranties--with-bg {
+    padding: 130px 0 190px;
+    position: relative;
+    color: $white;
+    @media (max-width: 767px) {
+      padding: 100px 0;
+    }
+
+    .warranties {
+      &__container {
+        position: relative;
+        z-index: 2;
+      }
+
+      &__item {
+        border-color: $white;
+      }
+
+      &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.70);
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 }
 
 .testimonials {
@@ -1267,6 +1311,11 @@ section {
 
         &__item-testimonials-box {
           color: $white;
+
+          .icon-comments {
+            fill: $white;
+            transition: .3s ease-in-out;
+          }
         }
 
         &__devider {
@@ -1361,10 +1410,12 @@ section {
     @media (max-width: 600px) {
       margin-bottom: 15px;
     }
-  }
 
-  &__item-testimonials-img-wrapper {
-    margin-bottom: 4px;
+    .icon-comments {
+      fill: $template-purple;
+      margin-bottom: 4px;
+      transition: .3s ease-in-out;
+    }
   }
 
   &__item-testimonials-text {
@@ -1393,6 +1444,12 @@ section {
             color: $template-purple;
           }
 
+          &__item-testimonials-box {
+            .icon-comments {
+              fill: $template-purple;
+            }
+          }
+
           &__item-testimonials-text {
             color: $template-purple;
           }
@@ -1407,6 +1464,12 @@ section {
 
     &__item-type {
       color: $template-black;
+    }
+
+    &__item-testimonials-box {
+      .icon-comments {
+        fill: $template-black;
+      }
     }
 
     &__item-testimonials-text {
@@ -1599,6 +1662,7 @@ section {
     }
 
     &.opened {
+      padding-bottom: 10px;
       background-color: $template-purple;
       color: $white;
       transition: .3s ease-in-out;
@@ -1677,12 +1741,55 @@ section {
 
   &__body-text {
     color: $white;
-    max-width: 685px;
+    max-width: 740px;
     padding: 0 30px 20px;
     @media (max-width: 767px) {
       font-size: 16px;
       line-height: 19px;
       padding: 0 20px 20px;
+    }
+  }
+
+  &.faq--with-bg {
+    padding: 80px 0;
+    position: relative;
+    @media (max-width: 767px) {
+      padding: 100px 0;
+    }
+
+    .faq {
+      &__container {
+        position: relative;
+        z-index: 2;
+      }
+
+      &__title {
+        color: $white;
+      }
+
+      &__bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.70);
+          z-index: 1;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }
@@ -1899,6 +2006,29 @@ section {
     @media (max-width: 767px) {
       font-size: 14px;
       line-height: 17px;
+    }
+  }
+}
+
+.page-list-pg {
+  background-color: $template-light-gray;
+  padding: 50px 0 200px;
+}
+
+.pages-list {
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: $template-black;
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      text-decoration-color: $template-black;
     }
   }
 }

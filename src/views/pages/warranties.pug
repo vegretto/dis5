@@ -1,0 +1,45 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .warranties-pg.pg-wrapper
+        section.warranties.-with-bg
+            ._container.container
+                h2.h2 Гарантии
+                ._items
+                    ._item
+                        ._item-heading Оригинальность
+                        ._item-text Все дипломные работы и&nbsp;диссертации проходят проверку на&nbsp;антиплагиат. Мы&nbsp;гарантируем, что&nbsp;ваша&nbsp;работа будет уникальной и&nbsp;%&nbsp;оригинальности не&nbsp;ниже выбранного при оформлении заказа.
+                    ._item
+                        ._item-heading Бесплатная доработка
+                        ._item-text Преподаватель просит внести правки? Если потребуется, выполним бесплатно в&nbsp;рамках ваших&nbsp;первоначальных требований к&nbsp;заказу.
+                    ._item
+                        ._item-heading Соблюдение сроков
+                        ._item-text Мы&nbsp;понимаем, как важно получить работу точно&nbsp;в&nbsp;срок. Поэтому мы&nbsp;никогда не&nbsp;задерживаем&nbsp;сроки написаний дипломных&nbsp;и&nbsp;диссертаций.
+                    ._item
+                        ._item-heading Конфиденциальность
+                        ._item-text Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.
+                    ._item
+                        ._item-heading Договор/оферта
+                        ._item-text Мы&nbsp;оказываем услуги официально.<br>Заключаем договор в&nbsp;оффлайн-офисе или оферту&nbsp;на&nbsp;сайте.
+            ._bg
+                +pictureAdaptive('warranties-bg', 'png', 1920, 756, 600)
+        section.lead-magnet
+            ._inner
+                h2._title.h2 Узнайте стоимость консультации!
+                form(action="https://www.work5.ru/orders")._form.js-validator
+                    ._form-item.form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.js-input-required.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item.form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                    ._form-item.form-item.-double
+                        button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                        .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                    input(type="hidden" name="act" value="services").hidden
+                    ._form-item.form-item
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]

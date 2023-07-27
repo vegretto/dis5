@@ -1,0 +1,115 @@
+extends ../layout
+include ../mixins/mixins
+
+block content
+    .testimonials-pg.pg-wrapper
+        section.top-text
+            ._container.container
+                h1._title.h1 Заголовок
+                ._text За&nbsp;17&nbsp;лет работы мы&nbsp;накопили бесценный опыт по&nbsp;написанию выпускных и&nbsp;научных работ на&nbsp;заказ. Сформировали сильную команду авторов, кандидатов, докторов наук, собственный отдел технического контроля и&nbsp;отдела по&nbsp;качеству. Мы&nbsp;беремся за&nbsp;выполнение нестандартных и&nbsp;самых сложных заказов, например, технические направления. Наш опыт поможет вам качественно и&nbsp;в&nbsp;срок написать работу.
+        section.testimonials
+            ._container.container
+                h2._title.h2 Отзывы
+                ._top
+                    ._top-item
+                        ._top-heading
+                            +icon('star')
+                            ._top-heading-text 4.9
+                        ._top-text Средняя оценка:
+                    ._top-item
+                        ._top-heading
+                            ._top-heading-text 10 000+
+                        ._top-text Общее кол-во отзывов:
+                ._slider.swiper-slider.js-testimonials-slider
+                    ._swiper-wrapper.swiper-wrapper
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar1', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar2', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar.-placeholder
+                                        ._item-avatar-letter И
+                                    ._item-person-name Имя Фамилия
+                        ._swiper-slide.swiper-slide
+                            ._item
+                                ._item-rating
+                                    +icon('star')
+                                    ._item-rating-num 4.9
+                                ._item-text “Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.”
+                                ._item-person
+                                    ._item-avatar
+                                        +picture('testimonials-avatar1', 'png', 70, 70)
+                                    ._item-person-name Имя Фамилия
+                    .swiper-buttons-wrapper
+                        .swiper-button.swiper-button--prev
+                            +icon('arrow-right')
+                        .swiper-button.swiper-button--next
+                            +icon('arrow-right')
+        section.ratings
+            ._container.container
+                h2._title.h2 Оценки на&nbsp;сайтах-&#8288;отзовиках
+                ._items
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo1', 'png', 131, 52)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo1', 'png', 131, 52)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo2', 'png', 133, 44)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo3', 'png', 124, 48)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo4', 'png', 158, 38)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9
+                    ._item
+                        ._item-inner
+                            ._item-head
+                                +picture('rating-logo5', 'png', 187, 44)
+                            ._item-tail
+                                +icon('star')
+                                ._item-rating-num 4.9

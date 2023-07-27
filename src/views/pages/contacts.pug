@@ -17,38 +17,34 @@ block content
                             +icon('envelope')
                         a(href="mailto:name@gmail.com")._item-link.placeholder.js-contacts-mail name@gmail.com
                         ._item-text Электронная почта
-                    ._item
+                    ._item.-social
                         ._item-icon
                             +icon('tg')
                         a(href="#")._item-link.-purple Телеграм
                         ._item-text Соц.сети
-                    ._item
+                    ._item.-social
                         ._item-icon
                             +icon('vk')
                         a(href="#")._item-link.-purple Вконтакте
         section.contacts-cities
             ._container.container
-                ._items
-                    ._item
-                        ._item-letter В
-                        ._item-city Владивосток
-                        ._item-city Воронеж
-                    ._item
-                        ._item-letter Е
-                        ._item-city Екатеринбург
-                    ._item
-                        ._item-letter Е
-                        ._item-city Иркутск
-                    ._item
-                        ._item-letter В
-                        ._item-city Владивосток
-                        ._item-city Воронеж
-                    ._item
-                        ._item-letter Е
-                        ._item-city Екатеринбург
-                    ._item
-                        ._item-letter Е
-                        ._item-city Иркутск
-                    ._item
-                        ._item-letter Е
-                        ._item-city Иркутск
+                ._items.js-cities-list
+        section.lead-magnet
+            ._inner
+                h2._title.h2 Узнайте стоимость консультации!
+                form(action="https://www.work5.ru/orders")._form.js-validator
+                    ._form-item.form-item
+                        .select-wrapper
+                            select(name="type_work").js-search-select.js-input-required.hidden
+                                option(value="") Тип работы
+                                option(value="diplom") Диссертация
+                                option(value="diplom") Диплом
+                                option(value="diplom") Реферат
+                    ._form-item.form-item
+                        input(type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email").common-input.js-input-required
+                    ._form-item.form-item.-double
+                        button(type="submit")._submit-btn.common-btn.common-btn--black Узнать стоимость
+                        .form-disclaimer Это бесплатно и займет 1&nbsp;минуту
+                    input(type="hidden" name="act" value="services").hidden
+                    ._form-item.form-item
+                        .form-licence-info Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия #[a(href="https://www.work5.ru/usloviya-ispolzovaniya-sajta") публичной&nbsp;оферты] и&nbsp;даете согласие на&nbsp;#[a(href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh") обработку персональных данных]

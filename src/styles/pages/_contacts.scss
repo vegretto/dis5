@@ -1,19 +1,43 @@
 .contacts-pg {
   background-color: $template-light-gray;
   padding: 75px 0 200px;
+  @media (max-width: 767px) {
+    padding: 100px 0 0;
+  }
+
+  .lead-magnet {
+    padding: 100px 0 0;
+    @media (max-width: 767px) {
+      padding: 50px 0 0;
+    }
+  }
 }
 
 .contacts-main {
   padding: 0 0 50px;
   background-color: $template-light-gray;
+  @media (max-width: 767px) {
+    padding: 0 0 30px;
+  }
 
   &__title {
     color: $template-purple;
     margin-bottom: 80px;
+    @media (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   }
 
   &__items {
     display: flex;
+    @media (max-width: 991px) {
+      flex-wrap: wrap;
+      margin: -30px -20px;
+    }
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+      margin: -20px 0;
+    }
   }
 
   &__item {
@@ -21,10 +45,31 @@
     flex-direction: column;
     align-items: flex-start;
     margin-right: 70px;
+    @media (max-width: 991px) {
+      flex-basis: calc(45% - 40px);
+      max-width: calc(45% - 40px);
+      margin: 30px 20px;
+    }
+    @media (max-width: 767px) {
+      flex-basis: 100%;
+      max-width: 100%;
+      margin: 20px 0;
+    }
+
+    &--social {
+      margin-right: 30px;
+      @media (max-width: 991px) {
+        flex-basis: auto;
+      }
+      @media (max-width: 767px) {
+        margin-right: 40px;
+      }
+    }
 
     &:last-child {
       margin-right: 0;
     }
+
   }
 
   &__item-icon {
@@ -36,6 +81,11 @@
     justify-content: center;
     margin-bottom: 20px;
     border-radius: 15px;
+    @media (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
 
     .icon {
       fill: $white;
@@ -69,6 +119,10 @@
     margin-bottom: 5px;
     color: $template-black;
     position: relative;
+    @media (max-width: 767px) {
+      font-size: 22px;
+      line-height: 27px;
+    }
 
     &:hover {
       text-decoration-color: $template-black;
@@ -92,11 +146,24 @@
 
 .contacts-cities {
   padding: 50px 0 100px;
+  background-color: $template-light-gray;
+  @media (max-width: 767px) {
+    padding: 50px 0;
+  }
 
   &__items {
     display: grid;
     grid-template-columns: repeat(6, minmax(150px, 260px));
     grid-gap: 50px 20px;
+    @media (max-width: 1199px) {
+      grid-template-columns: repeat(4, minmax(150px, 260px));
+    }
+    @media (max-width: 767px) {
+      grid-template-columns: repeat(2, minmax(150px, 260px));
+    }
+    @media (max-width: 499px) {
+      grid-template-columns: 1fr;
+    }
   }
 
   &__item {
@@ -115,6 +182,15 @@
 
   &__item-city {
     margin-bottom: 15px;
+    cursor: pointer;
+    text-decoration: underline;
+    text-decoration-color: $transparent;
+    transition: .3s ease-in-out;
+
+    &:hover {
+      text-decoration-color: $template-black;
+      transition: .3s ease-in-out;
+    }
 
     &:last-child {
       margin-bottom: 0;

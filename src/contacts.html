@@ -114,7 +114,7 @@
 							</div><a class="contacts-main__item-link placeholder js-contacts-mail" href="mailto:name@gmail.com">name@gmail.com</a>
 							<div class="contacts-main__item-text">Электронная почта</div>
 						</div>
-						<div class="contacts-main__item">
+						<div class="contacts-main__item contacts-main__item--social">
 							<div class="contacts-main__item-icon">
 								<svg class="icon icon-tg">
 									<use xlink:href="/img/svg/sprite.svg#tg"></use>
@@ -122,7 +122,7 @@
 							</div><a class="contacts-main__item-link contacts-main__item-link--purple" href="#">Телеграм</a>
 							<div class="contacts-main__item-text">Соц.сети</div>
 						</div>
-						<div class="contacts-main__item">
+						<div class="contacts-main__item contacts-main__item--social">
 							<div class="contacts-main__item-icon">
 								<svg class="icon icon-vk">
 									<use xlink:href="/img/svg/sprite.svg#vk"></use>
@@ -134,38 +134,35 @@
 			</section>
 			<section class="contacts-cities">
 				<div class="contacts-cities__container container">
-					<div class="contacts-cities__items">
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">В</div>
-							<div class="contacts-cities__item-city">Владивосток</div>
-							<div class="contacts-cities__item-city">Воронеж</div>
+					<div class="contacts-cities__items js-cities-list"></div>
+				</div>
+			</section>
+			<section class="lead-magnet">
+				<div class="lead-magnet__inner">
+					<h2 class="lead-magnet__title h2">Узнайте стоимость консультации!</h2>
+					<form class="lead-magnet__form js-validator" action="https://www.work5.ru/orders">
+						<div class="lead-magnet__form-item form-item">
+							<div class="select-wrapper">
+								<select class="js-search-select js-input-required hidden" name="type_work">
+									<option value="">Тип работы</option>
+									<option value="diplom">Диссертация</option>
+									<option value="diplom">Диплом</option>
+									<option value="diplom">Реферат</option>
+								</select>
+							</div>
 						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">Е</div>
-							<div class="contacts-cities__item-city">Екатеринбург</div>
+						<div class="lead-magnet__form-item form-item">
+							<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
 						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">Е</div>
-							<div class="contacts-cities__item-city">Иркутск</div>
+						<div class="lead-magnet__form-item form-item lead-magnet__form-item--double">
+							<button class="lead-magnet__submit-btn common-btn common-btn--black" type="submit">Узнать стоимость</button>
+							<div class="form-disclaimer">Это бесплатно и займет 1&nbsp;минуту</div>
 						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">В</div>
-							<div class="contacts-cities__item-city">Владивосток</div>
-							<div class="contacts-cities__item-city">Воронеж</div>
+						<input class="hidden" type="hidden" name="act" value="services">
+						<div class="lead-magnet__form-item form-item">
+							<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной&nbsp;оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
 						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">Е</div>
-							<div class="contacts-cities__item-city">Екатеринбург</div>
-						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">Е</div>
-							<div class="contacts-cities__item-city">Иркутск</div>
-						</div>
-						<div class="contacts-cities__item">
-							<div class="contacts-cities__item-letter">Е</div>
-							<div class="contacts-cities__item-city">Иркутск</div>
-						</div>
-					</div>
+					</form>
 				</div>
 			</section>
 		</div>

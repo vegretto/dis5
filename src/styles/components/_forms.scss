@@ -111,6 +111,7 @@
   background-color: $white;
   border: 1px solid #ccc;
   z-index: 1;
+  border-radius: 5px;
 
   &:before {
     content: "";
