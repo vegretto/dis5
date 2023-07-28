@@ -1,5 +1,5 @@
 $(document).ready(function () {
-
+    //Подгрузка скриптов
     function loadScript(url, callback) {
 
         const script = document.createElement("script");
@@ -11,15 +11,7 @@ $(document).ready(function () {
         document.getElementsByTagName("head")[0].appendChild(script);
     }
 
-    //Задержка действия на событие
-    const debounce = function (func, time) {
-        let timer
-        return function (event) {
-            if (timer) clearTimeout(timer)
-            timer = setTimeout(func, time, event)
-        }
-    }
-
+    //Находит ширину скроллбара
     const getScrollBarWidth = () => {
         let el = document.createElement("div");
         el.style.cssText = "overflow:scroll; position:absolute;";
@@ -29,6 +21,7 @@ $(document).ready(function () {
         return width;
     }
 
+    //Модалки
     const closeModal = (id) => {
         const modal = $(`.modal#${id}`)
         const burger = $('.header__mobile-menu-toggle')
@@ -69,6 +62,7 @@ $(document).ready(function () {
         dropdownBox.slideToggle(200)
     })
 
+    //Селекты
     const searchSelects = $(".js-search-select")
 
     searchSelects.each(function () {
@@ -81,11 +75,13 @@ $(document).ready(function () {
         })
     })
 
+    //Показывает инпут промокода в формах по клику
     $('.js-show-promocode').on('click', function () {
         $(this).hide()
         $(this).siblings('.js-promocode-input').show()
     })
 
+    //Добавляет кнопку и функционал "Показать еще"
     const hideSome = (element, resolution) => {
         if (screen.width > resolution) return
         const maxItems = element.attr('data-max-items')
@@ -93,9 +89,11 @@ $(document).ready(function () {
         const items = element.children()
         const itemsQty = items.length
         if (itemsQty <= maxItems) return
+
         items.each(function (index) {
             if (index >= maxItems) $(this).hide().addClass('hidden')
         })
+
         const moreBtnMarkup = '<button class="more-button js-more-btn common-btn common-btn--purple">Ещё...</button>'
         element.append(moreBtnMarkup)
         const moreBtnDom = element.find('.js-more-btn')
@@ -112,6 +110,7 @@ $(document).ready(function () {
         hideSome($(this), 991)
     })
 
+    //Слайдеры
     const testimonialsSlider = new Swiper('.js-testimonials-slider', {
         slidesPerView: 1,
         loop: true,
@@ -148,6 +147,7 @@ $(document).ready(function () {
         }
     });
 
+    //Аккордион
     $('.js-accordion-toggle').on('click', function () {
         if (!$(this).hasClass('opened')) {
             $(this).next('.js-accordion-head').slideDown(300).addClass('opened')
@@ -158,6 +158,7 @@ $(document).ready(function () {
         }
     })
 
+    //Карта
     const mainMap = document.getElementById('mainMap')
 
     async function initYMap() {
@@ -214,6 +215,7 @@ $(document).ready(function () {
         window.addEventListener('scroll', checkMapVisibility, {passive: true});
     }
 
+    //Валидация форм
     const validateInput = (input, inputValue, inputType) => {
         let errorMessage = ''
         if (validator.isEmpty(inputValue)) {
@@ -260,6 +262,7 @@ $(document).ready(function () {
         })
     })
 
+    //Выводит контактную информацию из JSON по нужному городу на странице контактов
     const renderContacts = (cityName, jsonPath) => {
         $.getJSON(jsonPath, function(data) {
             const currentCity = data.find(city => city.name === cityName)
@@ -270,10 +273,12 @@ $(document).ready(function () {
         })
     }
 
+    //Выводим заданный дефолтный город при загрузке страницы контактов
     if ($('.contacts-pg').length > 0) {
         renderContacts('Владивосток', './data/contacts.json')
     }
 
+    //Выводит список городов из JSON на странице контактов
     if ($('.js-cities-list').length > 0) {
         const letters = []
         $.getJSON('./data/contacts.json', function(data) {
