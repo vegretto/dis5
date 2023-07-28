@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Dis5.ru</title>
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+		<link rel="preload" href="/styles/style.min.css" as="style" onload="this.rel='stylesheet'">
+		<link rel="preload" href="/fonts/Inter/Inter-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/Inter/Inter-Bold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/fonts/Inter/Inter-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="preload" href="/scripts/vendor.min.js" as="script">
+		<link rel="preload" href="/scripts/vendor/validator.min.js" as="script">
+		<link rel="preload" href="/scripts/main.min.js" as="script">
+	</head>
+	<body>
+		<header class="header">
+			<div class="header__container container">
+				<div class="header__top">
+					<div class="header__top-item header__top-item--phone">
+						<svg class="icon icon-phone">
+							<use xlink:href="/img/svg/sprite.svg#phone"></use>
+						</svg><a class="header__top-item-text" href="tel:+70000000000">+7 (---) ---_--_--</a>
+					</div>
+					<div class="header__top-item header__top-item--mail">
+						<svg class="icon icon-envelope">
+							<use xlink:href="/img/svg/sprite.svg#envelope"></use>
+						</svg><a class="header__top-item-text" href="mailto:name@gmail.com">name@gmail.com</a>
+					</div>
+					<div class="header__top-item header__top-item--address">
+						<svg class="icon icon-point">
+							<use xlink:href="/img/svg/sprite.svg#point"></use>
+						</svg>
+						<div class="header__top-item-text">Москва, ул. Арбат, д. 35, офис 468, этаж 4</div>
+					</div>
+				</div>
+				<div class="header__bottom"><a class="header__logo-wrapper" href="/">
+						<div class="header__logo">Dis5</div>
+						<div class="header__logo-descriptor"><span>by</span>
+							<picture>
+								<source data-srcset="/img/five-logo-small.webp, /img/five-logo-small@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/five-logo-small.png" data-srcset="/img/five-logo-small@2x.png 2x" alt="" width="12" height="12"/>
+							</picture><span>— ВКР и диссертации</span>
+						</div></a>
+					<nav class="header__nav">
+						<div class="header__nav-item header__nav-item--dropdown"><a class="header__nav-link" href="#">Дипломные</a>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+							<div class="header__nav-dropdown-box">
+								<nav class="header__dropdown-nav"><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+							</div>
+						</div>
+						<div class="header__nav-item header__nav-item--dropdown"><a class="header__nav-link" href="#">Диссертации</a>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+							<div class="header__nav-dropdown-box">
+								<nav class="header__dropdown-nav"><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+							</div>
+						</div>
+						<div class="header__nav-item header__nav-item--dropdown"><a class="header__nav-link" href="#">Научные статьи</a>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+							<div class="header__nav-dropdown-box">
+								<nav class="header__dropdown-nav"><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+							</div>
+						</div>
+						<div class="header__nav-item header__nav-item--dropdown"><a class="header__nav-link" href="#">Другие услуги</a>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+							<div class="header__nav-dropdown-box">
+								<nav class="header__dropdown-nav"><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+							</div>
+						</div>
+						<div class="header__nav-item header__nav-item--dropdown"><a class="header__nav-link" href="#">О компании</a>
+							<svg class="icon icon-arrow-down">
+								<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+							</svg>
+							<div class="header__nav-dropdown-box">
+								<nav class="header__dropdown-nav"><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a><a class="header__dropdown-nav-item" href="#">Раздел</a><a class="header__dropdown-nav-item" href="#">Подраздел</a><a class="header__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+							</div>
+						</div>
+						<div class="header__nav-item"><a class="header__nav-link" href="#">Отзывы</a></div>
+					</nav><a class="header__order-btn common-btn common-btn--purple" href="https://www.work5.ru/orders">Оформить заказ</a>
+					<div class="header__mobile-menu-toggle js-open-modal" data-modal="modalMobileMenu" data-mob-menu="true">
+						<svg class="icon icon-mob-menu">
+							<use xlink:href="/img/svg/sprite.svg#mob-menu"></use>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div class="warranties-pg pg-wrapper">
+			<section class="warranties warranties--with-bg">
+				<div class="warranties__container container">
+					<h2 class="h2">Гарантии</h2>
+					<div class="warranties__items">
+						<div class="warranties__item">
+							<div class="warranties__item-heading">Оригинальность</div>
+							<div class="warranties__item-text">Все дипломные работы и&nbsp;диссертации проходят проверку на&nbsp;антиплагиат. Мы&nbsp;гарантируем, что&nbsp;ваша&nbsp;работа будет уникальной и&nbsp;%&nbsp;оригинальности не&nbsp;ниже выбранного при оформлении заказа.</div>
+						</div>
+						<div class="warranties__item">
+							<div class="warranties__item-heading">Бесплатная доработка</div>
+							<div class="warranties__item-text">Преподаватель просит внести правки? Если потребуется, выполним бесплатно в&nbsp;рамках ваших&nbsp;первоначальных требований к&nbsp;заказу.</div>
+						</div>
+						<div class="warranties__item">
+							<div class="warranties__item-heading">Соблюдение сроков</div>
+							<div class="warranties__item-text">Мы&nbsp;понимаем, как важно получить работу точно&nbsp;в&nbsp;срок. Поэтому мы&nbsp;никогда не&nbsp;задерживаем&nbsp;сроки написаний дипломных&nbsp;и&nbsp;диссертаций.</div>
+						</div>
+						<div class="warranties__item">
+							<div class="warranties__item-heading">Конфиденциальность</div>
+							<div class="warranties__item-text">Гарантируем конфиденциальность. Ваши личные данные, ни&nbsp;при каких условиях, не&nbsp;будут переданы третьим лицам.</div>
+						</div>
+						<div class="warranties__item">
+							<div class="warranties__item-heading">Договор/оферта</div>
+							<div class="warranties__item-text">Мы&nbsp;оказываем услуги официально.<br>Заключаем договор в&nbsp;оффлайн-офисе или оферту&nbsp;на&nbsp;сайте.</div>
+						</div>
+					</div>
+				</div>
+				<div class="warranties__bg">
+					<picture>
+						<source data-srcset="/img/warranties-bg-sm.webp, /img/warranties-bg-sm@2x.webp 2x" type="image/webp" media="(max-width: 600px)"/>
+						<source data-srcset="/img/warranties-bg-sm.png, /img/warranties-bg-sm@2x.png 2x" media="(max-width: 600px)"/>
+						<source data-srcset="/img/warranties-bg.webp, /img/warranties-bg@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/warranties-bg.png" data-srcset="/img/warranties-bg@2x.png 2x" alt="" width="1920" height="756"/>
+					</picture>
+				</div>
+			</section>
+			<section class="lead-magnet">
+				<div class="lead-magnet__inner">
+					<h2 class="lead-magnet__title h2">Узнайте стоимость консультации!</h2>
+					<form class="lead-magnet__form js-validator" action="https://www.work5.ru/orders">
+						<div class="lead-magnet__form-item form-item">
+							<div class="select-wrapper">
+								<select class="js-search-select js-input-required hidden" name="type_work">
+									<option value="">Тип работы</option>
+									<option value="diplom">Диссертация</option>
+									<option value="diplom">Диплом</option>
+									<option value="diplom">Реферат</option>
+								</select>
+							</div>
+						</div>
+						<div class="lead-magnet__form-item form-item">
+							<input class="common-input js-input-required" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
+						</div>
+						<div class="lead-magnet__form-item form-item lead-magnet__form-item--double">
+							<button class="lead-magnet__submit-btn common-btn common-btn--black" type="submit">Узнать стоимость</button>
+							<div class="form-disclaimer">Это бесплатно и займет 1&nbsp;минуту</div>
+						</div>
+						<input class="hidden" type="hidden" name="act" value="services">
+						<div class="lead-magnet__form-item form-item">
+							<div class="form-licence-info">Нажимая кнопку «Узнать стоимость», вы&nbsp;принимаете условия <a href="https://www.work5.ru/usloviya-ispolzovaniya-sajta">публичной&nbsp;оферты</a> и&nbsp;даете согласие на&nbsp;<a href="https://www.work5.ru/politika-obrabotki-personalnyh-dannyh">обработку персональных данных</a></div>
+						</div>
+					</form>
+				</div>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="footer__container container">
+				<div class="footer__top">
+					<div class="footer__top-col footer__top-col--first">
+						<div class="footer__navs">
+							<div class="footer__nav-box">
+								<div class="footer__nav-heading">О Work5</div>
+								<nav class="footer__nav"><a class="footer__nav-link" href="#">Способ оплаты</a><a class="footer__nav-link" href="#">Наши гарантии</a><a class="footer__nav-link" href="#">Контакты</a><a class="footer__nav-link" href="#">Вопросы и ответы</a><a class="footer__nav-link" href="#">Как это работает</a></nav>
+							</div>
+							<div class="footer__nav-box">
+								<div class="footer__nav-heading">Клиентам</div>
+								<nav class="footer__nav"><a class="footer__nav-link" href="#">Скидки</a><a class="footer__nav-link" href="#">Статьи</a><a class="footer__nav-link" href="#">Справочник</a></nav>
+							</div>
+							<div class="footer__nav-box">
+								<div class="footer__nav-heading">Специалистам</div>
+								<nav class="footer__nav"><a class="footer__nav-link" href="#">Вход для специалистов</a><a class="footer__nav-link" href="#">Условия работы</a><a class="footer__nav-link" href="#">Регистрация специалистов</a></nav>
+							</div>
+						</div>
+					</div>
+					<div class="footer__top-col footer__top-col--second">
+						<div class="footer__subscribe-box">
+							<div class="footer__subscribe-heading">Подписаться на акции и&nbsp;бонусы</div>
+							<form class="footer__subscribe-form js-validator">
+								<div class="footer__subscribe-form-item form-item">
+									<input class="common-input js-input-required footer__email-input" type="text" name="email" placeholder="Ваш электронный адрес" data-validator-type="email">
+								</div>
+								<button class="footer__submit-btn common-btn common-btn--purple" type="submit">Подписаться</button>
+							</form>
+						</div>
+						<div class="footer__socials"><a class="footer__socials-link" href="#">
+								<svg class="icon icon-vk">
+									<use xlink:href="/img/svg/sprite.svg#vk"></use>
+								</svg></a><a class="footer__socials-link" href="#">
+								<svg class="icon icon-tg">
+									<use xlink:href="/img/svg/sprite.svg#tg"></use>
+								</svg></a></div>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__bottom-col footer__bottom-col--first">
+						<div class="footer__bottom-col-top">
+							<div class="footer__sber-logo">
+								<picture>
+									<source data-srcset="/img/sber.webp, /img/sber@2x.webp 2x" type="image/webp"/><img class="lazyload" src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgMSAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9IiNkMWQxZDEiLz48L3N2Zz4=" data-src="/img/sber.png" data-srcset="/img/sber@2x.png 2x" alt="" width="210" height="33"/>
+								</picture>
+							</div>
+							<div class="footer__bottom-text">Партнер по обеспечению безопасных&nbsp;платежей</div>
+						</div>
+						<div class="footer__bottom-col-bottom">
+							<div class="footer__bottom-text">* &#8470;&nbsp;1&nbsp;на рынке консультационных услуг для студентов по&nbsp;количеству стационарных офисов-филиалов в&nbsp;20&nbsp;городах России (от&nbsp;Владивостока до&nbsp;Москвы, <a href="#">полный перечень филиалов</a>). <br>Зона обслуживания онлайн&nbsp;&mdash; вся Россия.</div>
+						</div>
+					</div>
+					<div class="footer__bottom-col footer__bottom-col--second"><a class="footer__licence-link" href="#">Политика конфиденциальности</a><a class="footer__licence-link" href="#">Пользовательское соглашение</a></div>
+					<div class="footer__bottom-col footer__bottom-col--third"><a class="footer__phone" href="tel:88001005531">8 (800) 100-55-31</a>
+						<div class="footer__bottom-text">Контактный центр</div>
+					</div>
+					<div class="footer__bottom-col footer__bottom-col--fourth"><a class="footer__phone" href="tel:+74952152814">+7 (495) 215-28-14</a>
+						<div class="footer__bottom-text">
+							г. Москва<br>ул. Арбат, д. 35, офис 468, этаж 4<br>
+							По будням: пн-пт c 12:00 до 18:00<br>
+							Перерыв: с 14:00 до 15:00<br>
+							Выходные: суббота, воскресенье
+						</div><a class="footer__bottom-mail" href="mailto:client@work5.ru">client@work5.ru</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<div class="modal modal--mobile-menu" id="modalMobileMenu">
+			<div class="modal__close js-close-modal">
+				<svg class="icon icon-close">
+					<use xlink:href="/img/svg/sprite.svg#close"></use>
+				</svg>
+			</div>
+			<div class="modal__body">
+				<nav class="mobile-menu-nav">
+					<div class="mobile-menu-nav__item mobile-menu-nav__item--dropdown"><a class="mobile-menu-nav__item-box" href="#">
+							<div class="mobile-menu-nav__item-link">Дипломные</div>
+							<div class="mobile-menu-nav__item-arrow js-toggle-mobile-menu-dropdown">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div></a>
+						<div class="mobile-menu-nav__dropdown-box">
+							<nav class="mobile-menu-nav__dropdown-nav"><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+						</div>
+					</div>
+					<div class="mobile-menu-nav__item mobile-menu-nav__item--dropdown"><a class="mobile-menu-nav__item-box" href="#">
+							<div class="mobile-menu-nav__item-link">Диссертации</div>
+							<div class="mobile-menu-nav__item-arrow js-toggle-mobile-menu-dropdown">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div></a>
+						<div class="mobile-menu-nav__dropdown-box">
+							<nav class="mobile-menu-nav__dropdown-nav"><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+						</div>
+					</div>
+					<div class="mobile-menu-nav__item mobile-menu-nav__item--dropdown"><a class="mobile-menu-nav__item-box" href="#">
+							<div class="mobile-menu-nav__item-link">Научные статьи</div>
+							<div class="mobile-menu-nav__item-arrow js-toggle-mobile-menu-dropdown">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div></a>
+						<div class="mobile-menu-nav__dropdown-box">
+							<nav class="mobile-menu-nav__dropdown-nav"><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+						</div>
+					</div>
+					<div class="mobile-menu-nav__item mobile-menu-nav__item--dropdown"><a class="mobile-menu-nav__item-box" href="#">
+							<div class="mobile-menu-nav__item-link">Другие услуги</div>
+							<div class="mobile-menu-nav__item-arrow js-toggle-mobile-menu-dropdown">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div></a>
+						<div class="mobile-menu-nav__dropdown-box">
+							<nav class="mobile-menu-nav__dropdown-nav"><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+						</div>
+					</div>
+					<div class="mobile-menu-nav__item mobile-menu-nav__item--dropdown"><a class="mobile-menu-nav__item-box" href="#">
+							<div class="mobile-menu-nav__item-link">О компании</div>
+							<div class="mobile-menu-nav__item-arrow js-toggle-mobile-menu-dropdown">
+								<svg class="icon icon-arrow-down">
+									<use xlink:href="/img/svg/sprite.svg#arrow-down"></use>
+								</svg>
+							</div></a>
+						<div class="mobile-menu-nav__dropdown-box">
+							<nav class="mobile-menu-nav__dropdown-nav"><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Очень длинный подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Раздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Подраздел</a><a class="mobile-menu-nav__dropdown-nav-item" href="#">Длинный подраздел</a></nav>
+						</div>
+					</div>
+					<div class="mobile-menu-nav__item"><a class="mobile-menu-nav__item-link" href="#">Отзывы</a></div>
+				</nav><a class="modal__order-btn common-btn common-btn--purple" href="#">Оформить заказ</a>
+				<div class="modal__contacts-item modal__contacts-item--phone">
+					<svg class="icon icon-phone">
+						<use xlink:href="/img/svg/sprite.svg#phone"></use>
+					</svg><a class="modal__contacts-item-text" href="tel:+70000000000">+7 (---) ---_--_--</a>
+				</div>
+				<div class="modal__contacts-item modal__contacts-item--mail">
+					<svg class="icon icon-envelope">
+						<use xlink:href="/img/svg/sprite.svg#envelope"></use>
+					</svg><a class="modal__contacts-item-text" href="mailto:name@gmail.com">name@gmail.com</a>
+				</div>
+				<div class="modal__contacts-item modal__contacts-item--address">
+					<svg class="icon icon-point">
+						<use xlink:href="/img/svg/sprite.svg#point"></use>
+					</svg>
+					<div class="modal__contacts-item-text">Москва, ул.&nbsp;Арбат, д.&nbsp;35, офис&nbsp;468, этаж&nbsp;4</div>
+				</div>
+			</div>
+		</div>
+		<script src="/scripts/vendor.min.js"></script>
+		<script src="/scripts/vendor/validator.min.js"></script>
+		<script src="/scripts/main.min.js"></script>
+	</body>
+</html>

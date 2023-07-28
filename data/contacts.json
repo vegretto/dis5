@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Владивосток",
+    "phone": "8 (800) 100-55-31",
+    "mail": "name@gmail.com"
+  },
+  {
+    "name": "Воронеж",
+    "phone": "8 (800) 111-12-55",
+    "mail": "name2@gmail.com"
+  },
+  {
+    "name": "Екатеринбург",
+    "phone": "8 (800) 211-12-55",
+    "mail": "name5@gmail.com"
+  },
+  {
+    "name": "Иркутск",
+    "phone": "8 (800) 123-321-12",
+    "mail": "name6@gmail.com"
+  },
+  {
+    "name": "Астрахань",
+    "phone": "8 (800) 555-12-33",
+    "mail": "name7@gmail.com"
+  },
+  {
+    "name": "Москва",
+    "phone": "8 (800) 222-12-33",
+    "mail": "name8@gmail.com"
+  },
+  {
+    "name": "Санкт-Петербург",
+    "phone": "8 (800) 123-12-33",
+    "mail": "name9@gmail.com"
+  },
+  {
+    "name": "Магадан",
+    "phone": "8 (800) 321-12-33",
+    "mail": "name9@gmail.com"
+  },
+  {
+    "name": "Махачкала",
+    "phone": "8 (800) 555-12-33",
+    "mail": "longlonglonglong@gmail.com"
+  },
+  {
+    "name": "Ставрополь",
+    "phone": "8 (800) 547-12-33",
+    "mail": "name9@gmail.com"
+  },
+  {
+    "name": "Ростов",
+    "phone": "8 (800) 234-12-33",
+    "mail": "name9@gmail.com"
+  }
+]
