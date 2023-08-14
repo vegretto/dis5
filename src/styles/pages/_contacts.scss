@@ -11,6 +11,10 @@
       padding: 50px 0 0;
     }
   }
+
+  .contacts {
+    background-color: $template-light-gray;
+  }
 }
 
 .contacts-main {
@@ -44,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 70px;
+    margin-right: 80px;
     @media (max-width: 991px) {
       flex-basis: calc(45% - 40px);
       max-width: calc(45% - 40px);
@@ -57,7 +61,6 @@
     }
 
     &--social {
-      margin-right: 30px;
       @media (max-width: 991px) {
         flex-basis: auto;
       }

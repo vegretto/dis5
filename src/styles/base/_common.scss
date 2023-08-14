@@ -74,6 +74,8 @@ section {
   line-height: 79px;
   font-weight: 700;
   margin-bottom: 50px;
+  display: block;
+  color: $template-black;
   @media (max-width: 767px) {
     font-size: 40px;
     line-height: 48px;
@@ -85,12 +87,23 @@ section {
   line-height: 48px;
   font-weight: 700;
   margin-bottom: 70px;
+  display: block;
+  color: $template-black;
   @media (max-width: 767px) {
     font-size: 30px;
     line-height: 36px;
     margin-bottom: 50px;
   }
+
+  a {
+    color: $template-black;
+
+    &:hover {
+      color: $template-purple;
+    }
+  }
 }
+
 
 .txt-purple {
   color: $template-purple;
@@ -143,9 +156,17 @@ section {
 }
 
 .pg-wrapper {
+  background-color: $template-light-gray;
   padding-bottom: 200px;
   @media (max-width: 767px) {
     padding-bottom: 100px;
+  }
+}
+
+.content-pg {
+  padding: 100px 0 200px;
+  @media (max-width: 767px) {
+    padding: 50px 0 100px;
   }
 }
 
@@ -1303,6 +1324,10 @@ section {
           transition: .3s ease-in-out;
         }
 
+        &__item-heading {
+          color: $white;
+        }
+
         &__item-btn {
           background-color: $white;
           color: $template-black;
@@ -1340,6 +1365,7 @@ section {
     line-height: 27px;
     margin-bottom: 30px;
     font-weight: 700;
+    color: $template-black;
   }
 
   &__devider {
@@ -1347,11 +1373,8 @@ section {
     height: 1px;
     background-color: rgba(62, 65, 70, 0.20);
     margin-bottom: 30px;
+    margin-top: auto;
     transition: .3s ease-in-out;
-  }
-
-  &__item-details {
-    margin-bottom: auto;
   }
 
   &__item-details-item {
@@ -1444,6 +1467,10 @@ section {
             color: $template-purple;
           }
 
+          &__item-heading {
+            color: $template-purple;
+          }
+
           &__item-testimonials-box {
             .icon-comments {
               fill: $template-purple;
@@ -1465,6 +1492,7 @@ section {
     &__item-type {
       color: $template-black;
     }
+
 
     &__item-testimonials-box {
       .icon-comments {
@@ -1516,9 +1544,14 @@ section {
     line-height: 27px;
     font-weight: 700;
     margin-bottom: 10px;
+    color: $template-black;
     @media (max-width: 767px) {
       font-size: 19px;
       line-height: 24px;
+    }
+
+    &:hover {
+      color: $template-purple;
     }
   }
 
